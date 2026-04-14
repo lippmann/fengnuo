@@ -1,53 +1,70 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
-// components shared across all pages
+// 所有页面共享的组件
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
   afterBody: [],
-  footer: Component.Footer({
-    links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
-    },
+  footer: Component.ConditionalRender({
+    component: Component.Footer({
+      links: {
+        首页: "/",
+      },
+    }),
+    condition: (page) => page.fileData.slug !== "index",
   }),
 }
 
-// components for pages that display a single page (e.g. a single note)
+// 单篇内容页（博客文章、板块页面等）
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
+    // 首页不显示面包屑
     Component.ConditionalRender({
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
     }),
-    Component.ArticleTitle(),
-    Component.ContentMeta(),
+    // 首页不显示标题（HTML 自定义）
+    Component.ConditionalRender({
+      component: Component.ArticleTitle(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ConditionalRender({
+      component: Component.ContentMeta(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
     Component.TagList(),
   ],
   left: [
-    Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Flex({
-      components: [
-        {
-          Component: Component.Search(),
-          grow: true,
-        },
-        { Component: Component.Darkmode() },
-        { Component: Component.ReaderMode() },
-      ],
+    Component.ConditionalRender({
+      component: Component.PageTitle(),
+      condition: (page) => page.fileData.slug !== "index",
     }),
-    Component.Explorer(),
+    Component.ConditionalRender({
+      component: Component.MobileOnly(Component.Spacer()),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ConditionalRender({
+      component: Component.Flex({
+        components: [
+          {
+            Component: Component.Search(),
+            grow: true,
+          },
+        ],
+      }),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
+    Component.ConditionalRender({
+      component: Component.Explorer(),
+      condition: (page) => page.fileData.slug !== "index",
+    }),
   ],
-  right: [
-    Component.Graph(),
-    Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks(),
-  ],
+  // 右侧不显示知识图谱和反向链接
+  right: [],
 }
 
-// components for pages that display lists of pages  (e.g. tags or folders)
+// 列表页（标签页、文件夹页）
 export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
@@ -59,7 +76,7 @@ export const defaultListPageLayout: PageLayout = {
           Component: Component.Search(),
           grow: true,
         },
-        { Component: Component.Darkmode() },
+        // 深色模式已禁用（本站为固定亮色调设计）
       ],
     }),
     Component.Explorer(),

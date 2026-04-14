@@ -2,7 +2,7 @@ export const CommonArgv = {
   directory: {
     string: true,
     alias: ["d"],
-    default: "content",
+    default: "/Users/liurui28/Library/CloudStorage/Dropbox/Obsidian/lr's notes/nuo",
     describe: "directory to look for content files",
   },
   verbose: {
