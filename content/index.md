@@ -26,113 +26,133 @@ body[data-slug="index"] article.popover-hint { padding: 0 !important; max-width:
   --rule: #D8D0C6;
   --accent: #8B4A3C;
 }
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* ── Outer wrap ── */
 .fn-wrap {
   background: var(--paper);
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
   font-family: 'IBM Plex Mono', monospace;
   color: var(--ink);
   padding: 0 32px;
 }
-
 .fn-page {
   width: 100%;
-  max-width: 860px;
-  padding: 52px 0 48px;
+  max-width: 900px;
+  padding: 48px 0 52px;
   display: flex;
   flex-direction: column;
+  gap: 0;
 }
 
-/* ── Two-column layout ── */
-.fn-main {
+/* ── Header ── */
+.fn-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.fn-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 26px;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: var(--ink);
+  text-decoration: none;
+}
+.fn-title:hover { color: var(--accent); }
+.fn-socials {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+.fn-social {
+  font-size: 10px;
+  font-weight: 300;
+  letter-spacing: 0.14em;
+  color: var(--ink-mid);
+  text-decoration: none;
+  text-transform: lowercase;
+  transition: color 0.18s;
+  position: relative;
+}
+.fn-social::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0;
+  width: 0; height: 1px;
+  background: var(--accent);
+  transition: width 0.18s;
+}
+.fn-social:hover { color: var(--accent); }
+.fn-social:hover::after { width: 100%; }
+
+/* ── Middle: balloon + portrait ── */
+.fn-middle {
   display: grid;
-  grid-template-columns: 210px 1fr;
+  grid-template-columns: 1fr 170px;
   align-items: start;
+  margin-bottom: 40px;
 }
 
-/* ── Left: hand-drawn speech balloon ── */
-.fn-left {
-  display: flex;
-  flex-direction: column;
-  padding-right: 24px;
+/* Speech balloon */
+.fn-balloon-wrap {
+  position: relative;
+  padding-right: 36px;
 }
-
-/* SVG hand-drawn border — rendered as background */
 .fn-balloon {
   position: relative;
   border: 1.5px solid var(--ink);
-  border-radius: 16px 4px 14px 5px / 5px 14px 4px 16px;
-  padding: 32px 36px 36px;
+  border-radius: 14px 5px 12px 4px / 4px 12px 5px 14px;
+  padding: 28px 32px 28px;
   background: var(--paper);
   overflow: visible;
-  height: 100%;
-  min-height: 480px;
-  display: flex;
-  flex-direction: column;
 }
-
-/* Decorative quote mark */
+/* Decorative quote */
 .fn-balloon::before {
   content: '\300C';
   position: absolute;
-  bottom: 20px;
-  right: 24px;
+  bottom: 12px; right: 18px;
   font-family: 'Noto Serif SC', serif;
-  font-size: 96px;
+  font-size: 80px;
   font-weight: 900;
   color: var(--ink);
   opacity: 0.04;
   line-height: 1;
   pointer-events: none;
-  z-index: 0;
 }
-
-/* Hand-drawn tail using SVG polygon — positioned absolutely */
+/* Tail pointing right toward portrait */
 .fn-tail-svg {
   position: absolute;
-  left: -1px;
-  top: 40px;
-  width: 44px;
-  height: 28px;
+  right: -1px;
+  top: 44px;
+  width: 40px;
+  height: 26px;
   overflow: visible;
   pointer-events: none;
   z-index: 4;
 }
-
 .fn-says-label {
   font-size: 9px;
   letter-spacing: 0.22em;
   color: var(--ink-faint);
   font-weight: 300;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   text-transform: lowercase;
-  position: relative;
-  z-index: 1;
 }
 .fn-says-label em { font-style: normal; color: var(--accent); }
-
-.fn-feed {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  z-index: 1;
-}
-
+.fn-feed { display: flex; flex-direction: column; }
 .fn-entry {
-  padding: 18px 0;
+  padding: 16px 0;
   border-bottom: 1px solid var(--rule);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
 .fn-entry:first-child { padding-top: 0; }
 .fn-entry:last-child { border-bottom: none; padding-bottom: 0; }
-
 .fn-entry-text {
   font-family: 'Noto Serif SC', serif;
   font-size: 14px;
@@ -141,7 +161,6 @@ body[data-slug="index"] article.popover-hint { padding: 0 !important; max-width:
   color: var(--ink);
   letter-spacing: 0.04em;
 }
-
 .fn-entry-date {
   font-size: 9px;
   color: var(--ink-faint);
@@ -150,20 +169,19 @@ body[data-slug="index"] article.popover-hint { padding: 0 !important; max-width:
   text-align: right;
 }
 
-/* ── Right column: balloon ── */
-.fn-right {
-  position: relative;
-  padding-left: 40px;
+/* Portrait */
+.fn-portrait-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-left: 8px;
 }
-
 .fn-portrait {
-  width: 100%;
-  aspect-ratio: 3/4;
+  width: 148px;
+  height: 185px;
   overflow: hidden;
-  position: relative;
-  margin-bottom: 12px;
 }
-
 .fn-portrait img {
   width: 100%;
   height: 100%;
@@ -172,97 +190,91 @@ body[data-slug="index"] article.popover-hint { padding: 0 !important; max-width:
   mix-blend-mode: multiply;
   display: block;
 }
-
-/* Name below portrait */
-.fn-name {
+.fn-portrait-name {
   font-family: 'Noto Serif SC', serif;
-  font-size: 28px;
+  font-size: 15px;
   font-weight: 900;
   letter-spacing: 0.14em;
   color: var(--ink);
-  margin-bottom: 10px;
-  line-height: 1;
+  text-align: center;
 }
-
 .fn-cursor {
   display: inline-block;
-  width: 2px;
-  height: 12px;
+  width: 2px; height: 12px;
   background: var(--accent);
   margin-left: 2px;
   vertical-align: middle;
   animation: blink 1.2s step-end infinite;
 }
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
-
-.fn-intro {
-  font-family: 'Noto Serif SC', serif;
-  font-size: 11px;
-  font-weight: 300;
-  line-height: 1.9;
-  color: var(--ink-faint);
-  letter-spacing: 0.04em;
-  margin-bottom: 22px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid var(--rule);
-}
-
-/* ── Nav links: clean, simple ── */
-.fn-nav-block {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.fn-nav-section { display: flex; flex-direction: column; gap: 2px; }
-
-.fn-nav-heading {
+.fn-portrait-role {
   font-size: 9px;
-  letter-spacing: 0.2em;
+  color: var(--ink-faint);
+  letter-spacing: 0.12em;
+  font-weight: 300;
+  text-align: center;
+  line-height: 2;
+}
+
+/* ── Bottom nav ── */
+.fn-nav {
+  border-top: 1px solid var(--rule);
+  display: flex;
+  align-items: stretch;
+}
+.fn-nav-section {
+  display: flex;
+  align-items: stretch;
+  flex: 1;
+}
+.fn-nav-section + .fn-nav-section {
+  border-left: 1px solid var(--rule);
+}
+.fn-nav-label {
+  font-size: 9px;
+  letter-spacing: 0.18em;
   color: var(--ink-faint);
   font-weight: 300;
-  text-transform: lowercase;
-  margin-bottom: 6px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  padding: 16px 10px 16px 8px;
+  border-right: 1px solid var(--rule);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.fn-nav-heading em { font-style: normal; color: var(--accent); }
-
+.fn-nav-links {
+  display: flex;
+  flex: 1;
+}
 .fn-nav-link {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 8px;
   font-family: 'Noto Serif SC', serif;
   font-size: 13px;
   font-weight: 400;
   color: var(--ink-mid);
   text-decoration: none;
-  letter-spacing: 0.04em;
-  line-height: 2.2;
-  transition: color 0.15s;
-  display: block;
+  letter-spacing: 0.06em;
+  border-right: 1px solid var(--rule);
+  transition: color 0.15s, background 0.15s;
 }
-.fn-nav-link:hover { color: var(--accent); }
+.fn-nav-link:last-child { border-right: none; }
+.fn-nav-link:hover {
+  color: var(--accent);
+  background: rgba(139,74,60,0.04);
+}
 
 /* ── Footer ── */
 .fn-footer {
-  margin-top: 40px;
-  padding-top: 14px;
+  margin-top: 28px;
   display: flex;
-  align-items: center;
-  gap: 20px;
+  justify-content: flex-end;
 }
-
-.fn-social {
-  font-size: 10px;
-  font-weight: 300;
-  letter-spacing: 0.14em;
-  color: var(--ink-mid);
-  text-decoration: none;
-  text-transform: lowercase;
-  transition: color 0.2s;
-}
-.fn-social:hover { color: var(--accent); }
-
-.fn-social-sep { font-size: 10px; color: var(--rule); }
-
 .fn-copy {
-  margin-left: auto;
   font-size: 9px;
   color: var(--ink-faint);
   letter-spacing: 0.14em;
@@ -272,71 +284,79 @@ body[data-slug="index"] article.popover-hint { padding: 0 !important; max-width:
 /* ── Responsive ── */
 @media (max-width: 640px) {
   .fn-wrap { padding: 0 20px; }
-  .fn-page { padding: 36px 0 40px; }
-  .fn-main { grid-template-columns: 1fr; }
-  .fn-left { padding-right: 0; margin-bottom: 36px; }
-  .fn-balloon { min-height: auto; }
+  .fn-page { padding: 32px 0 40px; }
+  .fn-middle { grid-template-columns: 1fr; gap: 32px; }
+  .fn-balloon-wrap { padding-right: 0; }
   .fn-tail-svg { display: none; }
-  .fn-right { padding-left: 0; }
+  .fn-portrait-col { flex-direction: row; gap: 16px; align-items: center; }
+  .fn-portrait { width: 80px; height: 100px; }
+  .fn-nav { flex-direction: column; }
+  .fn-nav-section + .fn-nav-section { border-left: none; border-top: 1px solid var(--rule); }
+  .fn-nav-label { writing-mode: horizontal-tb; padding: 10px 12px; border-right: none; border-bottom: 1px solid var(--rule); }
 }
 </style>
 
 <div class="fn-wrap">
 <div class="fn-page">
-<div class="fn-main">
-<div class="fn-left">
-<div class="fn-portrait">
-<img src="/avatar.png" alt="冯诺">
-</div>
-<p class="fn-name">冯诺<span class="fn-cursor"></span></p>
-<p class="fn-intro">作者 · 译者 · 偶尔写代码</p>
-<nav class="fn-nav-block">
-<div class="fn-nav-section">
-<span class="fn-nav-heading"><em>~/</em>作品</span>
-<a class="fn-nav-link" href="/books">译的书</a>
-<a class="fn-nav-link" href="/writing">写的文</a>
-<a class="fn-nav-link" href="/projects">编的程</a>
-</div>
-<div class="fn-nav-section">
-<span class="fn-nav-heading"><em>~/</em>兴趣</span>
-<a class="fn-nav-link" href="/reading">读的书</a>
-<a class="fn-nav-link" href="/movies">观的影</a>
-<a class="fn-nav-link" href="/music">听的乐</a>
-</div>
+<header class="fn-header">
+<a class="fn-title" href="/">冯诺</a>
+<nav class="fn-socials">
+<a class="fn-social" href="https://www.douban.com/people/L.Revolution/" target="_blank">豆瓣</a>
+<a class="fn-social" href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">github</a>
+<a class="fn-social" href="https://x.com/YOUR_X_HANDLE" target="_blank">x.com</a>
+<a class="fn-social" href="mailto:YOUR_EMAIL_ADDRESS">mail</a>
 </nav>
-</div>
-<div class="fn-right">
+</header>
+<div class="fn-middle">
+<div class="fn-balloon-wrap">
 <div class="fn-balloon">
 <p class="fn-says-label"><em>~/says</em> &nbsp;·&nbsp; 碎的念</p>
 <div class="fn-feed">
 <div class="fn-entry">
-<p class="fn-entry-text">翻译是一种慢下来的阅读。每一个词都要停留，直到它在另一种语言里找到自己的位置。</p>
-<span class="fn-entry-date">2026 · 04 · 12</span>
+<p class="fn-entry-text">Claude Code 简直是人民的大救星，自从用上了它，我已经 vibe coding 了两个 Chrome 插件并提交商店审核。目前正在开发一个手机应用，另外还做了两份新产品的 PRD，等手头上的弄完就推进。谁能想到，在30多岁的高龄，竟然成了一个半路出家的码农。</p>
+<span class="fn-entry-date">2026 · 04 · 10</span>
 </div>
 <div class="fn-entry">
-<p class="fn-entry-text">语言是住所，不是工具。你居住在语言里，而不是使用它。</p>
-<span class="fn-entry-date">2026 · 03 · 28</span>
+<p class="fn-entry-text">这辈子在语言学习上花的最大的一笔钱，是去年趁半价打折花了 399 美元买了 Pimsleur 终身套餐，可以学习里面的所有 50 多门语言。今天发现已经连续 250 天每天至少学 10 分钟以上，学完了从 Level 1 到 Level 5 的西班牙语。</p>
+<span class="fn-entry-date">2026 · 04 · 04</span>
 </div>
 <div class="fn-entry">
-<p class="fn-entry-text">最好的译文让人忘记它是译文。最好的写作让人忘记它是写作。</p>
-<span class="fn-entry-date">2026 · 03 · 10</span>
+<p class="fn-entry-text">之前就有人讨论为什么 AI 的 logo 都很像 asshole。别的不说，Claude 就特别像我的偶像冯内古特（也是本豆瓣 ID 的灵感来源）小说里出现过的插图，表示的正是 asshole。</p>
+<span class="fn-entry-date">2026 · 04 · 01</span>
 </div>
 </div>
 </div>
-<!-- Hand-drawn tail pointing left toward portrait -->
-<svg class="fn-tail-svg" viewBox="0 0 44 28" xmlns="http://www.w3.org/2000/svg">
-<path d="M43,8 C41,6 42,9 44,14 C38,12 26,10 0,14 C16,16 36,18 42,20 C43,18 45,16 43,8 Z" fill="#F5F0E8" stroke="#1A1814" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
+<svg class="fn-tail-svg" viewBox="0 0 40 26" xmlns="http://www.w3.org/2000/svg">
+<path d="M1,7 C3,5 2,8 0,13 C5,11 16,9 40,13 C26,15 7,17 2,19 C1,17 -1,15 1,7 Z" fill="#F5F0E8" stroke="#1A1814" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
 </svg>
 </div>
+<div class="fn-portrait-col">
+<div class="fn-portrait">
+<img src="/avatar.png" alt="冯诺">
 </div>
+<p class="fn-portrait-role">作者<br>译者<br>偶尔写代码</p>
+<p class="fn-portrait-name">冯诺<span class="fn-cursor"></span></p>
+</div>
+</div>
+<nav class="fn-nav">
+<div class="fn-nav-section">
+<span class="fn-nav-label">作品</span>
+<div class="fn-nav-links">
+<a class="fn-nav-link" href="/books">译的书</a>
+<a class="fn-nav-link" href="/writing">写的文</a>
+<a class="fn-nav-link" href="/projects">编的程</a>
+</div>
+</div>
+<div class="fn-nav-section">
+<span class="fn-nav-label">兴趣</span>
+<div class="fn-nav-links">
+<a class="fn-nav-link" href="/reading">读的书</a>
+<a class="fn-nav-link" href="/movies">观的影</a>
+<a class="fn-nav-link" href="/music">听的乐</a>
+</div>
+</div>
+</nav>
 <footer class="fn-footer">
-<a class="fn-social" href="https://www.douban.com/people/YOUR_DOUBAN_ID" target="_blank">豆瓣</a>
-<span class="fn-social-sep">×</span>
-<a class="fn-social" href="https://x.com/YOUR_X_HANDLE" target="_blank">x.com</a>
-<span class="fn-social-sep">×</span>
-<a class="fn-social" href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank">github</a>
-<span class="fn-social-sep">×</span>
-<a class="fn-social" href="mailto:YOUR_EMAIL_ADDRESS">mail</a>
 <span class="fn-copy">© 2026 冯诺</span>
 </footer>
 </div>

@@ -2,114 +2,97 @@
 """
 Fetches the latest Douban broadcasts (广播) for L.Revolution
 and updates the fn-feed section in content/index.md.
+
+Requires DOUBAN_COOKIE env var (full cookie string from browser devtools).
 """
 
+import os
 import re
+import ssl
 import sys
+import time
 import urllib.request
-import xml.etree.ElementTree as ET
-from datetime import datetime, timezone
+from datetime import datetime
 
-DOUBAN_RSS = "https://www.douban.com/feed/people/L.Revolution/miniblog"
-INDEX_MD = "content/index.md"
-MAX_ENTRIES = 3
+# Allow unverified SSL on macOS (system cert store issue)
+_SSL_CTX = ssl.create_default_context()
+_SSL_CTX.check_hostname = False
+_SSL_CTX.verify_mode = ssl.CERT_NONE
 
-HEADERS = {
-    "User-Agent": (
-        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-        "AppleWebKit/537.36 (KHTML, like Gecko) "
-        "Chrome/124.0.0.0 Safari/537.36"
-    ),
-    "Accept": "application/rss+xml, application/xml, text/xml",
-    "Accept-Language": "zh-CN,zh;q=0.9",
-}
+STATUSES_URL = "https://www.douban.com/people/L.Revolution/statuses"
+TOPIC_URL    = "https://www.douban.com/topic/{}/"
+INDEX_MD     = "content/index.md"
+MAX_ENTRIES  = 3
 
-
-def fetch_rss(url: str) -> bytes:
-    req = urllib.request.Request(url, headers=HEADERS)
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        return resp.read()
+COOKIE = os.environ.get("DOUBAN_COOKIE", "")
+if not COOKIE:
+    print("ERROR: DOUBAN_COOKIE env var not set", file=sys.stderr)
+    sys.exit(1)
 
 
-def parse_entries(xml_bytes: bytes) -> list[dict]:
-    root = ET.fromstring(xml_bytes)
-    ns = {"atom": "http://www.w3.org/2005/Atom"}
+def fetch(url: str) -> str:
+    req = urllib.request.Request(url, headers={
+        "Cookie": COOKIE,
+        "User-Agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) "
+            "Chrome/124.0.0.0 Safari/537.36"
+        ),
+        "Referer": "https://www.douban.com",
+        "Accept-Language": "zh-CN,zh;q=0.9",
+    })
+    with urllib.request.urlopen(req, timeout=15, context=_SSL_CTX) as resp:
+        return resp.read().decode("utf-8", errors="replace")
 
-    entries = []
 
-    # Try Atom format first (豆瓣通常返回 Atom)
-    for entry in root.findall("atom:entry", ns)[:MAX_ENTRIES]:
-        title_el = entry.find("atom:title", ns)
-        published_el = entry.find("atom:published", ns)
-        summary_el = entry.find("atom:summary", ns)
-        content_el = entry.find("atom:content", ns)
+def get_topic_ids(html: str) -> list[str]:
+    """Extract topic IDs (text broadcasts) from the statuses page."""
+    seen = set()
+    ids = []
+    for m in re.finditer(r'douban\.com/topic/(\d+)', html):
+        tid = m.group(1)
+        if tid not in seen:
+            seen.add(tid)
+            ids.append(tid)
+    return ids[:MAX_ENTRIES]
 
-        text = ""
-        if content_el is not None and content_el.text:
-            # Strip any HTML tags from content
-            text = re.sub(r"<[^>]+>", "", content_el.text).strip()
-        elif summary_el is not None and summary_el.text:
-            text = re.sub(r"<[^>]+>", "", summary_el.text).strip()
-        elif title_el is not None and title_el.text:
-            text = title_el.text.strip()
 
-        if not text:
-            continue
+def get_topic_content(topic_id: str) -> dict | None:
+    try:
+        html = fetch(TOPIC_URL.format(topic_id))
+    except Exception as e:
+        print(f"  WARNING: failed to fetch topic {topic_id}: {e}", file=sys.stderr)
+        return None
 
-        date_str = ""
-        if published_el is not None and published_el.text:
-            try:
-                dt = datetime.fromisoformat(
-                    published_el.text.replace("Z", "+00:00")
-                )
-                date_str = dt.strftime("%Y · %m · %d")
-            except ValueError:
-                date_str = published_el.text[:10]
+    date_m = re.search(r'<span class="create-time">([^<]+)</span>', html)
+    # Grab ALL paragraphs from the broadcast content
+    texts = re.findall(r'<p data-align[^>]*>(.*?)</p>', html, re.DOTALL)
 
-        entries.append({"text": text, "date": date_str})
+    if not texts:
+        return None
 
-    if entries:
-        return entries
+    full_text = "\n".join(
+        re.sub(r'<[^>]+>', '', t).strip()
+        for t in texts
+        if re.sub(r'<[^>]+>', '', t).strip()
+    )
 
-    # Fallback: RSS 2.0 format
-    channel = root.find("channel")
-    if channel is None:
-        return entries
+    date_str = ""
+    if date_m:
+        try:
+            dt = datetime.strptime(date_m.group(1).strip(), "%Y-%m-%d %H:%M:%S")
+            date_str = dt.strftime("%Y · %m · %d")
+        except ValueError:
+            date_str = date_m.group(1).strip()[:10]
 
-    for item in channel.findall("item")[:MAX_ENTRIES]:
-        title_el = item.find("title")
-        desc_el = item.find("description")
-        pubdate_el = item.find("pubDate")
-
-        text = ""
-        if desc_el is not None and desc_el.text:
-            text = re.sub(r"<[^>]+>", "", desc_el.text).strip()
-        elif title_el is not None and title_el.text:
-            text = title_el.text.strip()
-
-        if not text:
-            continue
-
-        date_str = ""
-        if pubdate_el is not None and pubdate_el.text:
-            try:
-                from email.utils import parsedate_to_datetime
-                dt = parsedate_to_datetime(pubdate_el.text)
-                date_str = dt.strftime("%Y · %m · %d")
-            except Exception:
-                date_str = pubdate_el.text[:10]
-
-        entries.append({"text": text, "date": date_str})
-
-    return entries
+    return {"text": full_text, "date": date_str}
 
 
 def build_feed_html(entries: list[dict]) -> str:
     parts = []
-    for i, entry in enumerate(entries):
-        text = entry["text"].replace("<", "&lt;").replace(">", "&gt;")
+    for entry in entries:
+        text = entry["text"].replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
         date = entry["date"]
-        padding_top = "" if i == 0 else ""
         parts.append(
             f'<div class="fn-entry">\n'
             f'<p class="fn-entry-text">{text}</p>\n'
@@ -125,18 +108,17 @@ def update_index(entries: list[dict]) -> bool:
 
     new_feed = build_feed_html(entries)
 
-    # Replace everything between <div class="fn-feed"> and </div> (the feed container)
     pattern = r'(<div class="fn-feed">)\n.*?(</div>\n</div>\n<!-- Hand-drawn tail)'
     replacement = r'\1\n' + new_feed + r'\n\2'
 
     new_content, count = re.subn(pattern, replacement, content, flags=re.DOTALL)
 
     if count == 0:
-        print("ERROR: Could not find fn-feed section in index.md", file=sys.stderr)
+        print("ERROR: could not find fn-feed section in index.md", file=sys.stderr)
         return False
 
     if new_content == content:
-        print("No changes — feed is already up to date.")
+        print("No changes — feed already up to date.")
         return True
 
     with open(INDEX_MD, "w", encoding="utf-8") as f:
@@ -147,21 +129,32 @@ def update_index(entries: list[dict]) -> bool:
 
 
 def main():
-    print(f"Fetching {DOUBAN_RSS} ...")
+    print(f"Fetching statuses page …")
     try:
-        xml_bytes = fetch_rss(DOUBAN_RSS)
+        statuses_html = fetch(STATUSES_URL)
     except Exception as e:
-        print(f"ERROR fetching RSS: {e}", file=sys.stderr)
+        print(f"ERROR fetching statuses page: {e}", file=sys.stderr)
         sys.exit(1)
 
-    entries = parse_entries(xml_bytes)
+    topic_ids = get_topic_ids(statuses_html)
+    if not topic_ids:
+        print("No broadcast topics found on statuses page.", file=sys.stderr)
+        sys.exit(1)
+
+    print(f"Found topic IDs: {topic_ids}")
+
+    entries = []
+    for tid in topic_ids:
+        print(f"  Fetching topic {tid} …")
+        entry = get_topic_content(tid)
+        if entry:
+            print(f"    [{entry['date']}] {entry['text'][:60]} …")
+            entries.append(entry)
+        time.sleep(0.8)   # be polite
+
     if not entries:
-        print("No entries found in RSS feed.", file=sys.stderr)
+        print("ERROR: no entries extracted.", file=sys.stderr)
         sys.exit(1)
-
-    print(f"Found {len(entries)} entries.")
-    for e in entries:
-        print(f"  [{e['date']}] {e['text'][:60]}...")
 
     if not update_index(entries):
         sys.exit(1)

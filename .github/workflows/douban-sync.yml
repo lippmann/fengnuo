@@ -20,6 +20,8 @@ jobs:
           python-version: '3.12'
 
       - name: Sync Douban broadcasts
+        env:
+          DOUBAN_COOKIE: ${{ secrets.DOUBAN_COOKIE }}
         run: python scripts/sync_douban.py
 
       - name: Commit and push if changed
