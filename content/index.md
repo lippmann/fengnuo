@@ -161,13 +161,19 @@ body[data-slug="index"] article.popover-hint { padding: 0 !important; max-width:
   color: var(--ink);
   letter-spacing: 0.04em;
 }
+.fn-entry-header { display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.fn-logo { width:22px; height:22px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; text-decoration:none; transition:opacity 0.15s; color:#fff; }
+.fn-logo:hover { opacity:0.75; }
 .fn-entry-date {
   font-size: 9px;
   color: var(--ink-faint);
   letter-spacing: 0.16em;
   font-weight: 300;
-  text-align: right;
 }
+.fn-entry-images { display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
+.fn-entry-images img { max-width:120px; max-height:120px; object-fit:cover; border-radius:2px; }
+.fn-more { display:block; margin-top:18px; font-size:10px; letter-spacing:0.16em; color:var(--ink-faint); text-decoration:none; text-align:right; transition:color 0.15s; }
+.fn-more:hover { color:var(--accent); }
 
 /* Portrait */
 .fn-portrait-col {
@@ -313,18 +319,27 @@ body[data-slug="index"] article.popover-hint { padding: 0 !important; max-width:
 <p class="fn-says-label"><em>~/says</em> &nbsp;·&nbsp; 碎的念</p>
 <div class="fn-feed">
 <div class="fn-entry">
-<p class="fn-entry-text">Claude Code 简直是人民的大救星，自从用上了它，我已经 vibe coding 了两个 Chrome 插件并提交商店审核。目前正在开发一个手机应用，另外还做了两份新产品的 PRD，等手头上的弄完就推进。谁能想到，在30多岁的高龄，竟然成了一个半路出家的码农。</p>
-<span class="fn-entry-date">2026 · 04 · 10</span>
-</div>
+<div class="fn-entry-header"><a class="fn-logo fn-logo-twitter" href="https://x.com/Surudo1892/status/2042573393376002534" target="_blank" title="twitter" style="background:#000000"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><span class="fn-entry-date">2026 · 04 · 10</span></div>
+<p class="fn-entry-text">Proper lad. Last summer I went to Hong Kong wearing No. 23 shirt to watch our team play against AC Milan in a friendly. Liverpool FC (@LFC) We can confirm Andy Robertson will bring his Reds career to …</p>
+<div class="fn-entry-images"><img src="https://nitter.net/pic/pbs.twimg.com%2Fmedia%2FHFepjb7XAAA9OVg.jpg" loading="lazy" alt=""></div></div>
 <div class="fn-entry">
-<p class="fn-entry-text">这辈子在语言学习上花的最大的一笔钱，是去年趁半价打折花了 399 美元买了 Pimsleur 终身套餐，可以学习里面的所有 50 多门语言。今天发现已经连续 250 天每天至少学 10 分钟以上，学完了从 Level 1 到 Level 5 的西班牙语。</p>
-<span class="fn-entry-date">2026 · 04 · 04</span>
-</div>
+<div class="fn-entry-header"><a class="fn-logo fn-logo-twitter" href="https://x.com/Surudo1892/status/2037377311851593733" target="_blank" title="twitter" style="background:#000000"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><span class="fn-entry-date">2026 · 03 · 27</span></div>
+<p class="fn-entry-text">Why is the avatar of this subreddit Zhu Yuanzhang? Images That Make You Feel Pain (@ManMilk2) — https://nitter.net/ManMilk2/status/2037258288409031039#m</p>
+<div class="fn-entry-images"><img src="https://nitter.net/pic/media%2FHEXLnbKWcAA1OIv.jpg" loading="lazy" alt=""></div></div>
 <div class="fn-entry">
-<p class="fn-entry-text">之前就有人讨论为什么 AI 的 logo 都很像 asshole。别的不说，Claude 就特别像我的偶像冯内古特（也是本豆瓣 ID 的灵感来源）小说里出现过的插图，表示的正是 asshole。</p>
-<span class="fn-entry-date">2026 · 04 · 01</span>
+<div class="fn-entry-header"><a class="fn-logo fn-logo-twitter" href="https://x.com/Surudo1892/status/2031092860221796511" target="_blank" title="twitter" style="background:#000000"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><span class="fn-entry-date">2026 · 03 · 09</span></div>
+<p class="fn-entry-text">Who tf says it’s romantic in books? Atlas Press (@realAtlasPress) “Being poor is only romantic in books.” —Sidney Sheldon — https://nitter.net/realAtlasPress/status/2030690508729614529#m</p>
+<div class="fn-entry-images"><img src="https://nitter.net/pic/media%2FHC5hTtrbwAEVCfl.jpg" loading="lazy" alt=""></div></div>
+<div class="fn-entry">
+<div class="fn-entry-header"><a class="fn-logo fn-logo-twitter" href="https://x.com/Surudo1892/status/2028347298066182629" target="_blank" title="twitter" style="background:#000000"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><span class="fn-entry-date">2026 · 03 · 02</span></div>
+<p class="fn-entry-text">支持！ 玩个锤子 (@cccchuizi) 【开工季福利来袭！！！】 为了感谢大家对我们的支持，我们打算免费送一台 Mac Mini256GB + 2000刀PackyAPI额度，助力2026年VibeCoding 和养殖龙虾！ 一等奖：macmini 256GB 一台 二等奖：Packyapi额度100 刀✖️10 人 三等奖：Packyapi额度50 刀✖️20 人 点赞+评论+转发即可参与抽…</p>
+<div class="fn-entry-images"><img src="https://nitter.net/pic/media%2FHCX7AjGbMAAIQuN.jpg" loading="lazy" alt=""></div></div>
+<div class="fn-entry">
+<div class="fn-entry-header"><a class="fn-logo fn-logo-twitter" href="https://x.com/Surudo1892/status/2028075316015468749" target="_blank" title="twitter" style="background:#000000"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><span class="fn-entry-date">2026 · 03 · 01</span></div>
+<p class="fn-entry-text">This guy just went to pee and his colleagues chose him to be the next Supreme Leader. Visegrád 24 (@visegrad24) BREAKING: Ayatollah Arafi has been appointed as the acting Supreme Leader of Iran, ISNA …</p>
+<div class="fn-entry-images"><img src="https://nitter.net/pic/media%2FHCUTHUsWsAA0p_h.jpg" loading="lazy" alt=""></div></div>
 </div>
-</div>
+<a class="fn-more" href="/says">查看更多 →</a>
 </div>
 <svg class="fn-tail-svg" viewBox="0 0 40 26" xmlns="http://www.w3.org/2000/svg">
 <path d="M1,7 C3,5 2,8 0,13 C5,11 16,9 40,13 C26,15 7,17 2,19 C1,17 -1,15 1,7 Z" fill="#F5F0E8" stroke="#1A1814" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/>
