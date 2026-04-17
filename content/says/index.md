@@ -33,9 +33,40 @@ title: 碎的念
 <h1 class="sy-title">碎的念</h1>
 </div>
 <div class="sy-filter">
-<span style="font-size:10px;letter-spacing:0.14em;color:#6B6560;font-weight:300">12 条记录</span>
+<span style="font-size:10px;letter-spacing:0.14em;color:#6B6560;font-weight:300">13 条记录</span>
 </div>
 <div class="sy-feed">
+<div class="fn-entry">
+<div class="fn-entry-header"><a class="fn-logo fn-logo-douban" href="https://www.douban.com/topic/484507348/" target="_blank" title="douban" style="background:#07A761"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><rect x="3" y="3" width="18" height="3" rx="1"/><rect x="5" y="8" width="14" height="10" rx="1"/><rect x="8" y="20" width="3" height="1" rx="0.5"/><rect x="13" y="20" width="3" height="1" rx="0.5"/><rect x="10" y="18" width="4" height="3" rx="0.5"/></svg></a><span class="fn-entry-date">2026 · 04 · 18</span></div>
+<p class="fn-entry-text">Pocket 倒闭后，一直想找个替代品，找来找去都不是特别满意。我现在用微信读书比较多，于是索性自己 vibe code 了一个 Chrome 扩展，一键可以将网页文章传到自己的微信读书里。再加上 我用别的插件把微读的摘录和批注全部同步到 Obsidian 里，算是初步实现了笔记的归拢。
+下载地址如下：
+以下是本扩展的功能介绍和使用方式，直接照抄了 Chrome 应用商店的文案：
+━━ 核心功能 ━━
+
+▎一键发送
+打开文章页面，点击扩展图标，确认后即可发送。无需复制粘贴，无需手动制作文件。
+
+▎智能提取正文
+自动识别文章主体内容，过滤广告、导航栏、评论区等无关元素。适配主流中文及海外新闻网站。
+
+▎分页文章自动合并
+遇到多页长文时，自动依次抓取所有页面并合并成完整内容，一次发送，无需手动翻页。
+▎图片完整保留
+在页面上下文中抓取图片，自动携带 Referer，可绕过 CDN 防盗链限制。支持懒加载图片。图片以内嵌方式写入 EPUB，在微信读书中离线可见。
+
+▎生成标准 EPUB
+纯本地生成，无需网络接口，自动填充标题、作者、来源站点、发布日期，并在文章开头附上原始链接，方便溯源。
+
+━━ 使用方法 ━━
+
+1. 在 weread.qq.com 登录微信读书网页版（一次即可）
+2. 打开任意想保存的文章页面
+3. 点击工具栏中的扩展图标
+4. 确认标题和字数，按需修改标题
+5. 点击「发送到微信读书」
+
+发送成功后，在微信读书「书架」中即可找到文章。</p>
+<div class="fn-entry-images"><img src="https://img3.doubanio.com/f/shire/e49eca1517424a941871a2667a8957fd6c72d632/pics/new_menu.gif" loading="lazy" alt=""><img src="https://img9.doubanio.com/icon/up2079635-35.jpg" loading="lazy" alt=""><img src="https://img9.doubanio.com/view/group_topic/l/public/p728439516.jpg" loading="lazy" alt=""><img src="https://img3.doubanio.com/view/group_topic/l/public/p728439692.jpg" loading="lazy" alt=""></div></div>
 <div class="fn-entry">
 <div class="fn-entry-header"><a class="fn-logo fn-logo-douban" href="https://www.douban.com/topic/483755955/" target="_blank" title="douban" style="background:#07A761"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><rect x="3" y="3" width="18" height="3" rx="1"/><rect x="5" y="8" width="14" height="10" rx="1"/><rect x="8" y="20" width="3" height="1" rx="0.5"/><rect x="13" y="20" width="3" height="1" rx="0.5"/><rect x="10" y="18" width="4" height="3" rx="0.5"/></svg></a><span class="fn-entry-date">2026 · 04 · 10</span></div>
 <p class="fn-entry-text">Claude Code 简直是人民的大救星，自从用上了它，我已经 vibe coding 了两个 Chrome 插件并提交商店审核。目前正在开发一个手机应用，另外还做了两份新产品的 PRD，等手头上的弄完就推进。谁能想到，在30多岁的高龄，竟然成了一个半路出家的码农。</p>
