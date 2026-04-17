@@ -82,6 +82,18 @@ LOGOS = {
         ' 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>'
         '</svg>'
     ),
+    "weread": (
+        '#1A7E4A',
+        '<svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">'
+        '<path d="M17.5 6.5C17.5 4.57 15.93 3 14 3s-3.5 1.57-3.5 3.5c0 .88.32 1.68.85 2.3'
+        'C9.91 9.38 9 10.84 9 12.5c0 2.49 2.01 4.5 4.5 4.5s4.5-2.01 4.5-4.5'
+        'c0-1.66-.91-3.12-2.35-3.7.53-.62.85-1.42.85-2.3z'
+        'M14 5c.83 0 1.5.67 1.5 1.5S14.83 8 14 8s-1.5-.67-1.5-1.5S13.17 5 14 5z'
+        'M13.5 15c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>'
+        '<path d="M6.5 8C5.12 8 4 9.12 4 10.5S5.12 13 6.5 13 9 11.88 9 10.5 7.88 8 6.5 8z'
+        'M6.5 11C6.22 11 6 10.78 6 10.5S6.22 10 6.5 10s.5.22.5.5-.22.5-.5.5z"/>'
+        '</svg>'
+    ),
 }
 
 
@@ -138,7 +150,61 @@ def _images_html(images: list[str]) -> str:
     return f'<div class="fn-entry-images">{imgs}</div>'
 
 
-def _entry_html(post: dict, show_full: bool = False) -> str:
+PLATFORM_ICONS = {
+    "twitter": (
+        "says-platform-twitter",
+        '<svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">'
+        '<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231'
+        '-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25z'
+        'm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>'
+        '</svg>'
+    ),
+    "douban": (
+        "says-platform-douban",
+        '<svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">'
+        '<rect x="3" y="3" width="18" height="3" rx="1"/>'
+        '<rect x="5" y="8" width="14" height="10" rx="1"/>'
+        '<rect x="8" y="20" width="3" height="1" rx="0.5"/>'
+        '<rect x="13" y="20" width="3" height="1" rx="0.5"/>'
+        '<rect x="10" y="18" width="4" height="3" rx="0.5"/>'
+        '</svg>'
+    ),
+    "weread": (
+        "says-platform-weread",
+        '<svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">'
+        '<path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h10v2H4z"/>'
+        '</svg>'
+    ),
+}
+
+
+def _home_entry_html(post: dict) -> str:
+    """Render a single post as a .says-entry for the homepage."""
+    platform = post.get("platform", "twitter")
+    url      = post.get("url", "#")
+    date     = _fmt_date(post.get("date", ""))
+    text     = post.get("text", "")
+    # Truncate long text on homepage
+    if len(text) > 200:
+        text = text[:200] + "…"
+    text_esc = text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+    css_class, svg = PLATFORM_ICONS.get(platform, PLATFORM_ICONS["twitter"])
+
+    images_html = ""
+    for img in post.get("images", [])[:1]:   # max 1 image on homepage
+        images_html += f'\n  <div class="says-images"><img src="{img}" loading="lazy" alt=""></div>'
+
+    return (
+        f'<div class="says-entry">\n'
+        f'  <div class="says-header">\n'
+        f'    <a class="says-platform {css_class}" href="{url}" target="_blank">{svg}</a>\n'
+        f'    <span class="says-date">{date}</span>\n'
+        f'  </div>\n'
+        f'  <p class="says-text">{text_esc}</p>'
+        f'{images_html}\n'
+        f'</div>'
+    )
     text = post.get("text", "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
     # Truncate on homepage if very long
     if not show_full and len(text) > 200:
@@ -161,24 +227,16 @@ def _entry_html(post: dict, show_full: bool = False) -> str:
 def update_index(posts: list[dict]):
     content = INDEX_MD.read_text(encoding="utf-8")
     top = posts[:HOME_MAX]
-    feed_html = "\n".join(_entry_html(p) for p in top)
+    entries_html = "\n\n".join(_home_entry_html(p) for p in top)
 
     new_content, n = re.subn(
-        r'(<div class="fn-feed">)\n.*?(</div>\n<a class="fn-more")',
-        r'\1\n' + feed_html + r'\n\2',
+        r'<!-- SAYS_START -->.*?<!-- SAYS_END -->',
+        f'<!-- SAYS_START -->\n{entries_html}\n<!-- SAYS_END -->',
         content,
         flags=re.DOTALL,
     )
     if n == 0:
-        # Fallback: try without the fn-more anchor
-        new_content, n = re.subn(
-            r'(<div class="fn-feed">)\n.*?(</div>\n</div>\n<svg class="fn-tail)',
-            r'\1\n' + feed_html + r'\n\2',
-            content,
-            flags=re.DOTALL,
-        )
-    if n == 0:
-        print("WARNING: could not find fn-feed anchor in index.md")
+        print("WARNING: could not find <!-- SAYS_START/END --> markers in index.md")
         return
 
     INDEX_MD.write_text(new_content, encoding="utf-8")
@@ -268,6 +326,14 @@ def main():
     # Instagram
     from sync_instagram import fetch_posts as fetch_instagram
     new_posts.extend(fetch_instagram())
+
+    # WeChat Reading (微信读书) highlights
+    weread_cookie = os.environ.get("WEREAD_COOKIE", "")
+    if weread_cookie:
+        from weread_sync import fetch_posts as fetch_weread
+        new_posts.extend(fetch_weread(weread_cookie))
+    else:
+        print("[weread] WEREAD_COOKIE not set — skipping")
 
     if new_posts:
         feed = merge(feed, new_posts)

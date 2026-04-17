@@ -1,18 +1,18 @@
 @use "./base.scss";
 
-// 正文排版（字体由 quartz.config.ts 的 fontOrigin: "googleFonts" 自动加载）
+// 正文排版
 article {
   font-family: 'Noto Serif SC', serif;
   font-weight: 300;
   line-height: 2;
   letter-spacing: 0.04em;
-  color: #3A3530;
+  color: #09090B;
   max-width: 660px;
   margin: 0 auto;
 }
 
-// 首页隐藏 Quartz 默认元素（.nuo-home 存在时生效）
-body:has(.nuo-home) {
+// 首页隐藏 Quartz 默认元素
+body[data-slug="index"] {
   .page-header,
   .left.sidebar,
   .right.sidebar,
@@ -23,19 +23,58 @@ body:has(.nuo-home) {
     display: none !important;
   }
 
-  // 首页让内容区全宽
+  // 完全折叠 page-header，消除 grid 留白
+  .page-header {
+    display: none !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  // 重置 grid 布局，去掉 grid-header 行
+  #quartz-body {
+    display: block !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 0 !important;
+  }
+
   .center {
-    max-width: 100% !important;
+    all: unset !important;
+    display: block !important;
+    width: 100% !important;
     padding: 0 !important;
     margin: 0 !important;
   }
 
-  // 隐藏面包屑、标题、元信息
   .breadcrumb-container,
   h1.article-title,
   .content-meta,
   .tags {
     display: none !important;
+  }
+
+  // 覆盖 Quartz 链接样式，避免影响首页自定义组件
+  .hp a,
+  .hp a.internal {
+    color: inherit !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    transition: none;
+    font-weight: inherit !important;
+  }
+
+  // 隐藏标题锚点链接
+  h1 > a, h2 > a, h3 > a {
+    display: none !important;
+  }
+  .hp .exp-item:hover {
+    background-color: #f4f4f5 !important;
+    border-radius: 12px !important;
   }
 }
 
@@ -44,51 +83,37 @@ body:has(.nuo-home) {
   padding: 48px 32px;
 }
 
-// 链接样式（仅内页，非首页 nuo-home 内）
+// 链接样式（内页）
 .center a:not(.nuo-entry):not(.nuo-social-item):not(.book-card):not(.article-item):not(.project-github) {
-  color: #2C2C2C;
+  color: #09090B;
   text-decoration: none;
-  border-bottom: 0.5px solid #D8D0C4;
-  transition: border-color 0.2s, color 0.2s;
+  border-bottom: 0.5px solid #E5E5E5;
+  transition: border-color 0.15s, color 0.15s;
 
   &:hover {
-    color: #8B4A3C;
-    border-bottom-color: #8B4A3C;
+    color: #737373;
+    border-bottom-color: #737373;
   }
 }
 
 // 代码块
 pre {
-  background: #2A2420 !important;
+  background: #1a1a1a !important;
   border-radius: 4px;
 }
 
-// 页脚简化
+// 页脚
 footer {
-  border-top: 0.5px solid #E0D8CE;
+  border-top: 1px solid #E5E5E5;
   font-size: 12px;
-  color: #C8C0B8;
+  color: #737373;
   font-weight: 300;
 
   a {
-    color: #C8C0B8;
+    color: #737373;
     border-bottom: none;
-    &:hover { color: #8B4A3C; }
+    &:hover { color: #09090B; }
   }
-}
-
-// 强制使用亮色模式（本站设计为暖米色调，不支持深色模式）
-// 覆盖 Quartz 的 [saved-theme="dark"] 变量，确保系统深色模式下也显示正确
-:root[saved-theme="dark"] {
-  --light: #F5F0E8 !important;
-  --lightgray: #E0D8CE !important;
-  --gray: #B0A496 !important;
-  --darkgray: #6A6258 !important;
-  --dark: #2C2C2C !important;
-  --secondary: #8B4A3C !important;
-  --tertiary: #C4956A !important;
-  --highlight: rgba(139, 74, 60, 0.06) !important;
-  --textHighlight: rgba(139, 74, 60, 0.15) !important;
 }
 
 // 移动端适配
@@ -97,3 +122,4 @@ footer {
     padding: 24px 16px;
   }
 }
+
