@@ -7,23 +7,15 @@ title: 译的书
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;900&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-/* ── Reset Quartz chrome on subpages ── */
-body[data-slug="books/index"] .sidebar,
-body[data-slug="books/index"] .page-header,
-body[data-slug="books/index"] .page-footer,
-body[data-slug="books/index"] footer,
-body[data-slug="books/index"] hr { display: none !important; }
-body[data-slug="books/index"] #quartz-body { display: block !important; padding: 0 !important; margin: 0 !important; gap: 0 !important; }
-body[data-slug="books/index"] .center { all: unset !important; display: block !important; width: 100% !important; padding: 0 !important; margin: 0 !important; }
-body[data-slug="books/index"] article.popover-hint { padding: 0 !important; max-width: 100% !important; margin: 0 !important; }
-body[data-slug="books/index"] .breadcrumb-container,
-body[data-slug="books/index"] h1.article-title,
-body[data-slug="books/index"] .content-meta,
-body[data-slug="books/index"] .tags { display: none !important; }
-body[data-slug="books/index"] h1 > a,
-body[data-slug="books/index"] h2 > a { display: none !important; }
-body[data-slug="books/index"] .pg a,
-body[data-slug="books/index"] .pg a.internal {
+/* ── Reset Quartz chrome ── */
+.sidebar, .page-header, .page-footer, footer, hr,
+.breadcrumb-container, h1.article-title, .content-meta, .tags,
+.left.sidebar, .right.sidebar, .backlinks, .graph { display: none !important; }
+#quartz-body { display: block !important; padding: 0 !important; margin: 0 !important; gap: 0 !important; }
+.center { all: unset !important; display: block !important; width: 100% !important; padding: 0 !important; margin: 0 !important; }
+article.popover-hint { padding: 0 !important; max-width: 100% !important; margin: 0 !important; }
+h1 > a, h2 > a { display: none !important; }
+.pg a, .pg a.internal {
   color: inherit !important; text-decoration: none !important;
   border-bottom: none !important; background-color: transparent !important;
   padding: 0 !important; border-radius: 0 !important;

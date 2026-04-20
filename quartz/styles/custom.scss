@@ -12,9 +12,9 @@ article {
 }
 
 // 子页面隐藏 Quartz 默认元素（books/writing/projects）
-body[data-slug="books/index"],
-body[data-slug="writing/index"],
-body[data-slug="projects/index"] {
+body[data-slug="books"],
+body[data-slug="writing"],
+body[data-slug="projects"] {
   .page-header,
   .left.sidebar,
   .right.sidebar,
