@@ -7,16 +7,26 @@ title: 译的书
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;700;900&family=IBM+Plex+Mono:ital,wght@0,200;0,300;0,400;1,300&display=swap" rel="stylesheet">
 
 <style>
-/* ── Quartz chrome reset ── */
-.sidebar,.page-header,.page-footer,footer,hr,
-.breadcrumb-container,h1.article-title,.content-meta,.tags,
-.left.sidebar,.right.sidebar,.backlinks,.graph{display:none!important}
-#quartz-root,
-#quartz-root > .page{display:block!important;padding:0!important;margin:0!important;max-width:none!important;width:100%!important}
-#quartz-body{display:block!important;padding:0!important;margin:0!important;gap:0!important;max-width:none!important}
-.center{all:unset!important;display:block!important;width:100%!important;max-width:none!important;padding:0!important;margin:0!important}
-article.popover-hint{padding:0!important;max-width:100%!important;margin:0!important;width:100%!important}
-h1>a,h2>a{display:none!important}
+/* ── Quartz chrome reset (scoped to books/index for specificity) ── */
+body[data-slug="books/index"] .sidebar,
+body[data-slug="books/index"] .page-header,
+body[data-slug="books/index"] .page-footer,
+body[data-slug="books/index"] footer,
+body[data-slug="books/index"] hr,
+body[data-slug="books/index"] .breadcrumb-container,
+body[data-slug="books/index"] h1.article-title,
+body[data-slug="books/index"] .content-meta,
+body[data-slug="books/index"] .tags,
+body[data-slug="books/index"] .left.sidebar,
+body[data-slug="books/index"] .right.sidebar,
+body[data-slug="books/index"] .backlinks,
+body[data-slug="books/index"] .graph{display:none!important}
+body[data-slug="books/index"] #quartz-root{display:block!important;padding:0!important;margin:0!important;max-width:none!important;width:100%!important}
+body[data-slug="books/index"] #quartz-body{display:block!important;padding:0!important;margin:0!important;gap:0!important;max-width:none!important;width:100%!important}
+body[data-slug="books/index"] .center{all:unset!important;display:block!important;width:100%!important;max-width:none!important;padding:0!important;margin:0!important}
+body[data-slug="books/index"] article.popover-hint{padding:0!important;max-width:100%!important;margin:0!important;width:100%!important}
+body[data-slug="books/index"] h1>a,
+body[data-slug="books/index"] h2>a{display:none!important}
 .bk a,.bk a.internal{color:inherit!important;text-decoration:none!important;border-bottom:none!important;background:transparent!important;padding:0!important;border-radius:0!important;font-weight:inherit!important}
 
 /* ── Light theme (default) ── */
