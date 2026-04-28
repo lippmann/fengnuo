@@ -11,9 +11,11 @@ title: 译的书
 .sidebar,.page-header,.page-footer,footer,hr,
 .breadcrumb-container,h1.article-title,.content-meta,.tags,
 .left.sidebar,.right.sidebar,.backlinks,.graph{display:none!important}
-#quartz-body{display:block!important;padding:0!important;margin:0!important;gap:0!important}
-.center{all:unset!important;display:block!important;width:100%!important;padding:0!important;margin:0!important}
-article.popover-hint{padding:0!important;max-width:100%!important;margin:0!important}
+#quartz-root,
+#quartz-root > .page{display:block!important;padding:0!important;margin:0!important;max-width:none!important;width:100%!important}
+#quartz-body{display:block!important;padding:0!important;margin:0!important;gap:0!important;max-width:none!important}
+.center{all:unset!important;display:block!important;width:100%!important;max-width:none!important;padding:0!important;margin:0!important}
+article.popover-hint{padding:0!important;max-width:100%!important;margin:0!important;width:100%!important}
 h1>a,h2>a{display:none!important}
 .bk a,.bk a.internal{color:inherit!important;text-decoration:none!important;border-bottom:none!important;background:transparent!important;padding:0!important;border-radius:0!important;font-weight:inherit!important}
 
