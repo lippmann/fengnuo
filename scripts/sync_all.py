@@ -205,8 +205,11 @@ def _home_entry_html(post: dict) -> str:
         f'{images_html}\n'
         f'</div>'
     )
+
+
+def _entry_html(post: dict, show_full: bool = False) -> str:
+    """Render a single post as a .fn-entry for the says archive page."""
     text = post.get("text", "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-    # Truncate on homepage if very long
     if not show_full and len(text) > 200:
         text = text[:200] + "…"
     date = _fmt_date(post.get("date", ""))
