@@ -150,76 +150,89 @@ def _images_html(images: list[str]) -> str:
     return f'<div class="fn-entry-images">{imgs}</div>'
 
 
-PLATFORM_ICONS = {
-    "twitter": (
-        "says-platform-twitter",
-        '<svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">'
-        '<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231'
-        '-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25z'
-        'm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>'
-        '</svg>'
-    ),
-    "douban": (
-        "says-platform-douban",
-        '<svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">'
-        '<rect x="3" y="3" width="18" height="3" rx="1"/>'
-        '<rect x="5" y="8" width="14" height="10" rx="1"/>'
-        '<rect x="8" y="20" width="3" height="1" rx="0.5"/>'
-        '<rect x="13" y="20" width="3" height="1" rx="0.5"/>'
-        '<rect x="10" y="18" width="4" height="3" rx="0.5"/>'
-        '</svg>'
-    ),
-    "weread": (
-        "says-platform-weread",
-        '<svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12">'
-        '<path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h10v2H4z"/>'
-        '</svg>'
-    ),
-}
+def _dot_svg(platform: str, size: int = 10) -> str:
+    """Return the inner SVG for a platform's timeline dot."""
+    svgs = {
+        "twitter": (
+            f'<svg viewBox="0 0 24 24" fill="currentColor" width="{size}" height="{size}">'
+            '<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231'
+            '-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25z'
+            'm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>'
+        ),
+        "douban": (
+            f'<svg viewBox="0 0 24 24" fill="currentColor" width="{size}" height="{size}">'
+            '<rect x="3" y="3" width="18" height="3" rx="1"/>'
+            '<rect x="5" y="8" width="14" height="10" rx="1"/>'
+            '<rect x="8" y="20" width="3" height="1" rx="0.5"/>'
+            '<rect x="13" y="20" width="3" height="1" rx="0.5"/>'
+            '<rect x="10" y="18" width="4" height="3" rx="0.5"/></svg>'
+        ),
+        "threads": (
+            f'<svg viewBox="0 0 24 24" fill="currentColor" width="{size}" height="{size}">'
+            '<path d="M12.186 24h-.007c-3.581-.024-6.334-1.205-8.184-3.509C2.35 18.44'
+            ' 1.5 15.586 1.5 12.068V12c0-3.368.829-6.108 2.465-8.14C5.684 1.707'
+            ' 8.428.5 11.993.5h.014c2.955.02 5.338 1.053 6.885 2.994 1.495 1.878'
+            ' 2.274 4.638 2.316 8.206l.002.3v.432c0 3.503-.765 6.15-2.273 7.871'
+            '-1.446 1.651-3.645 2.632-6.751 2.697z"/></svg>'
+        ),
+        "instagram": (
+            f'<svg viewBox="0 0 24 24" fill="currentColor" width="{size}" height="{size}">'
+            '<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691'
+            ' 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069'
+            ' 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07'
+            '-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058'
+            '-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227'
+            ' 1.664-4.771 4.919-4.919C8.333.014 8.741 0 12 0zm0 5.838a6.162 6.162'
+            ' 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010'
+            ' 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>'
+        ),
+        "weread": (
+            f'<svg viewBox="0 0 24 24" fill="currentColor" width="{size}" height="{size}">'
+            '<path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h10v2H4z"/></svg>'
+        ),
+    }
+    return svgs.get(platform, svgs["twitter"])
 
 
-def _home_entry_html(post: dict) -> str:
-    """Render a single post as a .says-entry for the homepage."""
+def _vb_entry_html(post: dict, truncate: int = 0) -> str:
+    """Render a single post as a .vb-entry (timeline style)."""
     platform = post.get("platform", "twitter")
     url      = post.get("url", "#")
     date     = _fmt_date(post.get("date", ""))
     text     = post.get("text", "")
-    # Truncate long text on homepage
-    if len(text) > 200:
-        text = text[:200] + "…"
+    if truncate and len(text) > truncate:
+        text = text[:truncate] + "…"
     text_esc = text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
-    css_class, svg = PLATFORM_ICONS.get(platform, PLATFORM_ICONS["twitter"])
-
-    images_html = ""
-    for img in post.get("images", [])[:1]:   # max 1 image on homepage
-        images_html += f'\n  <div class="says-images"><img src="{img}" loading="lazy" alt=""></div>'
+    svg = _dot_svg(platform, size=10)
+    max_imgs = 2 if truncate else 4
+    imgs = "".join(
+        f'<img src="{img}" loading="lazy" alt="">'
+        for img in post.get("images", [])[:max_imgs]
+    )
+    images_html = f'<div class="vb-images">{imgs}</div>' if imgs else ""
 
     return (
-        f'<div class="says-entry">\n'
-        f'  <div class="says-header">\n'
-        f'    <a class="says-platform {css_class}" href="{url}" target="_blank">{svg}</a>\n'
-        f'    <span class="says-date">{date}</span>\n'
-        f'  </div>\n'
-        f'  <p class="says-text">{text_esc}</p>'
-        f'{images_html}\n'
+        f'<div class="vb-entry">'
+        f'<div class="vb-spine">'
+        f'<a class="vb-dot vb-dot-{platform}" href="{url}" target="_blank" title="{platform}">{svg}</a>'
+        f'<div class="vb-line"></div>'
+        f'</div>'
+        f'<div class="vb-content">'
+        f'<p class="vb-date">{date}</p>'
+        f'<p class="vb-text">{text_esc}</p>'
+        f'{images_html}'
+        f'</div>'
         f'</div>'
     )
-    text = post.get("text", "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-    # Truncate on homepage if very long
-    if not show_full and len(text) > 200:
-        text = text[:200] + "…"
-    date = _fmt_date(post.get("date", ""))
-    logo = _logo_html(post["platform"], post["url"])
-    images = _images_html(post.get("images", []))
-    return (
-        f'<div class="fn-entry">\n'
-        f'<div class="fn-entry-header">{logo}'
-        f'<span class="fn-entry-date">{date}</span></div>\n'
-        f'<p class="fn-entry-text">{text}</p>\n'
-        f'{images}'
-        f'</div>'
-    )
+
+
+def _home_entry_html(post: dict) -> str:
+    return _vb_entry_html(post, truncate=200)
+
+
+def _entry_html(post: dict, show_full: bool = False) -> str:
+    return _vb_entry_html(post, truncate=0 if show_full else 200)
 
 
 # ── Index.md update ─────────────────────────────────────────────────────────
@@ -227,11 +240,12 @@ def _home_entry_html(post: dict) -> str:
 def update_index(posts: list[dict]):
     content = INDEX_MD.read_text(encoding="utf-8")
     top = posts[:HOME_MAX]
-    entries_html = "\n\n".join(_home_entry_html(p) for p in top)
+    entries_html = "\n".join(_home_entry_html(p) for p in top)
+    feed_block = f'<div class="vb-feed">\n{entries_html}\n</div>'
 
     new_content, n = re.subn(
         r'<!-- SAYS_START -->.*?<!-- SAYS_END -->',
-        f'<!-- SAYS_START -->\n{entries_html}\n<!-- SAYS_END -->',
+        f'<!-- SAYS_START -->\n{feed_block}\n<!-- SAYS_END -->',
         content,
         flags=re.DOTALL,
     )
@@ -252,27 +266,36 @@ title: 碎的念
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;900&family=IBM+Plex+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;900&family=IBM+Plex+Mono:ital,wght@0,300;0,400&display=swap" rel="stylesheet">
 
 <style>
-.sy-wrap {{ font-family:'IBM Plex Mono',monospace; color:#1A1814; padding:0 0 80px; }}
-.sy-header {{ margin-bottom:48px; padding-bottom:20px; border-bottom:1px solid #E0D8CE; }}
-.sy-eyebrow {{ font-size:10px; letter-spacing:0.2em; color:#C0B8AE; font-weight:300; margin:0 0 10px; }}
-.sy-eyebrow em {{ font-style:normal; color:#8B4A3C; }}
-.sy-title {{ font-family:'Noto Serif SC',serif; font-size:26px; font-weight:900; color:#1E1A17; margin:0; letter-spacing:0.06em; }}
-.sy-feed {{ display:flex; flex-direction:column; gap:0; }}
-.fn-entry {{ padding:24px 0; border-bottom:1px solid #E8E0D6; display:flex; flex-direction:column; gap:10px; }}
-.fn-entry:last-child {{ border-bottom:none; }}
-.fn-entry-header {{ display:flex; align-items:center; justify-content:space-between; gap:10px; }}
-.fn-logo {{ width:22px; height:22px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; text-decoration:none; transition:opacity 0.15s; color:#fff; }}
-.fn-logo:hover {{ opacity:0.75; }}
-.fn-entry-date {{ font-size:9px; color:#B8B0A8; letter-spacing:0.16em; font-weight:300; }}
-.fn-entry-text {{ font-family:'Noto Serif SC',serif; font-size:14px; font-weight:300; line-height:2; color:#1A1814; letter-spacing:0.04em; white-space:pre-wrap; }}
-.fn-entry-images {{ display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }}
-.fn-entry-images img {{ max-width:240px; max-height:240px; object-fit:cover; border-radius:2px; }}
-.sy-filter {{ display:flex; gap:16px; margin-bottom:32px; flex-wrap:wrap; }}
-.sy-filter-btn {{ font-size:10px; letter-spacing:0.14em; color:#B8B0A8; text-decoration:none; padding:4px 0; border-bottom:1px solid transparent; transition:color 0.15s, border-color 0.15s; }}
-.sy-filter-btn:hover {{ color:#8B4A3C; border-color:#8B4A3C; }}
+:root {{
+  --c-text:#09090b; --c-muted:#71717a; --c-border:#e4e4e7; --c-hover:#f4f4f5;
+}}
+.sy-wrap {{ font-family:'IBM Plex Mono',monospace; color:var(--c-text); padding:0 0 80px; max-width:640px; }}
+.sy-header {{ margin-bottom:48px; padding-bottom:20px; border-bottom:1px solid var(--c-border); }}
+.sy-eyebrow {{ font-size:10px; letter-spacing:0.2em; color:var(--c-muted); font-weight:300; margin:0 0 10px; }}
+.sy-eyebrow em {{ font-style:normal; }}
+.sy-title {{ font-family:'Noto Serif SC',serif; font-size:26px; font-weight:900; color:var(--c-text); margin:0; }}
+.sy-count {{ font-size:10px; letter-spacing:0.14em; color:var(--c-muted); font-weight:300; margin-bottom:32px; }}
+.vb-feed {{ display:flex; flex-direction:column; }}
+.vb-entry {{ display:grid; grid-template-columns:28px 1fr; gap:0 12px; padding:0 0 22px; }}
+.vb-entry:last-child {{ padding-bottom:0; }}
+.vb-spine {{ display:flex; flex-direction:column; align-items:center; }}
+.vb-dot {{ width:26px; height:26px; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0; text-decoration:none; color:#fff; margin-top:2px; transition:opacity 0.15s,transform 0.15s; }}
+.vb-dot:hover {{ opacity:0.8; transform:scale(1.08); }}
+.vb-dot-twitter  {{ background:#09090b; }}
+.vb-dot-douban   {{ background:#07A761; }}
+.vb-dot-threads  {{ background:#09090b; }}
+.vb-dot-weread   {{ background:#1A7E4A; }}
+.vb-dot-instagram {{ background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }}
+.vb-line {{ width:1px; background:var(--c-border); flex:1; margin-top:6px; min-height:10px; }}
+.vb-entry:last-child .vb-line {{ display:none; }}
+.vb-content {{ padding-top:3px; }}
+.vb-date {{ font-size:9px; color:var(--c-muted); letter-spacing:0.06em; font-weight:300; margin-bottom:7px; }}
+.vb-text {{ font-family:'Noto Serif SC',serif; font-size:14px; font-weight:300; line-height:2; color:var(--c-text); white-space:pre-wrap; }}
+.vb-images {{ display:flex; flex-wrap:wrap; gap:7px; margin-top:10px; }}
+.vb-images img {{ width:120px; height:120px; object-fit:cover; border-radius:2px; }}
 </style>
 
 <div class="sy-wrap">
@@ -280,10 +303,8 @@ title: 碎的念
 <p class="sy-eyebrow"><em>~/</em>says</p>
 <h1 class="sy-title">碎的念</h1>
 </div>
-<div class="sy-filter">
-<span style="font-size:10px;letter-spacing:0.14em;color:#6B6560;font-weight:300">{post_count} 条记录</span>
-</div>
-<div class="sy-feed">
+<p class="sy-count">{post_count} 条记录</p>
+<div class="vb-feed">
 {entries}
 </div>
 </div>

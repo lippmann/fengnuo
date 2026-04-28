@@ -217,42 +217,65 @@ body[data-slug="index"] .page-header { display: none !important; }
   padding-bottom: 8px;
 }
 
-/* ── Says entries ── */
-.says-entry {
-  padding: 14px 0;
-  border-bottom: 1px solid var(--c-border);
+/* ── Says · Timeline Feed ── */
+.vb-feed { display: flex; flex-direction: column; }
+.vb-entry {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 0 12px;
+  padding: 0 0 20px;
 }
-.says-entry:first-of-type { border-top: 1px solid var(--c-border); }
-.says-header {
+.vb-entry:last-child { padding-bottom: 0; }
+.vb-spine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.vb-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-.says-platform {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
+  justify-content: center;
+  flex-shrink: 0;
   text-decoration: none;
-  color: var(--c-muted);
-  opacity: 0.6;
+  color: #fff;
+  margin-top: 2px;
+  transition: opacity 0.15s, transform 0.15s;
 }
-.says-platform:hover { opacity: 1; }
-.says-date {
+.vb-dot:hover { opacity: 0.8; transform: scale(1.08); }
+.vb-dot-twitter  { background: #09090b; }
+.vb-dot-douban   { background: #07A761; }
+.vb-dot-threads  { background: #09090b; }
+.vb-dot-weread   { background: #1A7E4A; }
+.vb-dot-instagram { background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); }
+.vb-line {
+  width: 1px;
+  background: var(--c-border);
+  flex: 1;
+  margin-top: 5px;
+  min-height: 10px;
+}
+.vb-entry:last-child .vb-line { display: none; }
+.vb-content { padding-top: 3px; }
+.vb-date {
   font-family: 'IBM Plex Mono', monospace;
-  font-size: 10px;
+  font-size: 9px;
   color: var(--c-muted);
-  letter-spacing: 0.04em;
-}
-.says-text {
-  font-family: 'Noto Serif SC', serif;
-  font-size: 13px;
+  letter-spacing: 0.06em;
   font-weight: 300;
-  line-height: 2;
+  margin-bottom: 6px;
+}
+.vb-text {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 13.5px;
+  font-weight: 300;
+  line-height: 1.95;
   color: var(--c-text);
 }
-.says-images { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-.says-images img { max-width: 96px; max-height: 96px; object-fit: cover; border-radius: 4px; }
+.vb-images { display: flex; gap: 5px; margin-top: 9px; flex-wrap: wrap; }
+.vb-images img { width: 68px; height: 68px; object-fit: cover; border-radius: 2px; }
 .says-more {
   display: block;
   margin-top: 18px;
@@ -263,12 +286,6 @@ body[data-slug="index"] .page-header { display: none !important; }
   text-align: right;
 }
 .says-more:hover { color: var(--c-text); text-decoration: underline; text-underline-offset: 3px; }
-
-/* ── Says platform icons ── */
-.says-platform svg { display: block; }
-.says-platform-weread { color: #1A7E4A; }
-.says-platform-twitter { color: #09090b; }
-.says-platform-douban  { color: #07A761; }
 .hp-footer {
   margin-top: 48px;
   font-family: 'IBM Plex Mono', monospace;
@@ -445,48 +462,12 @@ body[data-slug="index"] .page-header { display: none !important; }
 <p class="hp-section-label">碎碎念</p>
 
 <!-- SAYS_START -->
-<div class="says-entry">
-  <div class="says-header">
-    <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2042573393376002534" target="_blank">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
-    </a>
-    <span class="says-date">2026 · 04 · 10</span>
-  </div>
-  <p class="says-text">Proper lad. Last summer I went to Hong Kong wearing No. 23 shirt to watch our team play against AC Milan in a friendly. Liverpool FC (@LFC) We can confirm Andy Robertson will bring his Reds career to …</p>
-  <div class="says-images"><img src="https://nitter.net/pic/pbs.twimg.com%2Fmedia%2FHFepjb7XAAA9OVg.jpg" loading="lazy" alt=""></div>
-</div>
-
-<div class="says-entry">
-  <div class="says-header">
-    <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2037377311851593733" target="_blank">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
-    </a>
-    <span class="says-date">2026 · 03 · 27</span>
-  </div>
-  <p class="says-text">Why is the avatar of this subreddit Zhu Yuanzhang? Images That Make You Feel Pain (@ManMilk2) — https://nitter.net/ManMilk2/status/2037258288409031039#m</p>
-  <div class="says-images"><img src="https://nitter.net/pic/media%2FHEXLnbKWcAA1OIv.jpg" loading="lazy" alt=""></div>
-</div>
-
-<div class="says-entry">
-  <div class="says-header">
-    <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2031092860221796511" target="_blank">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
-    </a>
-    <span class="says-date">2026 · 03 · 09</span>
-  </div>
-  <p class="says-text">Who tf says it's romantic in books? Atlas Press (@realAtlasPress) "Being poor is only romantic in books." —Sidney Sheldon</p>
-  <div class="says-images"><img src="https://nitter.net/pic/media%2FHC5hTtrbwAEVCfl.jpg" loading="lazy" alt=""></div>
-</div>
-
-<div class="says-entry">
-  <div class="says-header">
-    <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2028075316015468749" target="_blank">
-      <svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
-    </a>
-    <span class="says-date">2026 · 03 · 01</span>
-  </div>
-  <p class="says-text">This guy just went to pee and his colleagues chose him to be the next Supreme Leader. Visegrád 24 (@visegrad24) BREAKING: Ayatollah Arafi has been appointed as the acting Supreme Leader of Iran, ISNA …</p>
-  <div class="says-images"><img src="https://nitter.net/pic/media%2FHCUTHUsWsAA0p_h.jpg" loading="lazy" alt=""></div>
+<div class="vb-feed">
+<div class="vb-entry"><div class="vb-spine"><a class="vb-dot vb-dot-twitter" href="https://x.com/Surudo1892/status/2042573393376002534" target="_blank" title="twitter"><svg viewBox="0 0 24 24" fill="currentColor" width="10" height="10"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><div class="vb-line"></div></div><div class="vb-content"><p class="vb-date">2026 · 04 · 10</p><p class="vb-text">Proper lad. Last summer I went to Hong Kong wearing No. 23 shirt to watch our team play against AC Milan in a friendly. Liverpool FC (@LFC) We can confirm Andy Robertson will bring his Reds career to …</p><div class="vb-images"><img src="https://nitter.net/pic/pbs.twimg.com%2Fmedia%2FHFepjb7XAAA9OVg.jpg" loading="lazy" alt=""></div></div></div>
+<div class="vb-entry"><div class="vb-spine"><a class="vb-dot vb-dot-twitter" href="https://x.com/Surudo1892/status/2037377311851593733" target="_blank" title="twitter"><svg viewBox="0 0 24 24" fill="currentColor" width="10" height="10"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><div class="vb-line"></div></div><div class="vb-content"><p class="vb-date">2026 · 03 · 27</p><p class="vb-text">Why is the avatar of this subreddit Zhu Yuanzhang? Images That Make You Feel Pain (@ManMilk2) — https://nitter.net/ManMilk2/status/2037258288409031039#m</p><div class="vb-images"><img src="https://nitter.net/pic/media%2FHEXLnbKWcAA1OIv.jpg" loading="lazy" alt=""></div></div></div>
+<div class="vb-entry"><div class="vb-spine"><a class="vb-dot vb-dot-twitter" href="https://x.com/Surudo1892/status/2031092860221796511" target="_blank" title="twitter"><svg viewBox="0 0 24 24" fill="currentColor" width="10" height="10"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><div class="vb-line"></div></div><div class="vb-content"><p class="vb-date">2026 · 03 · 09</p><p class="vb-text">Who tf says it’s romantic in books? Atlas Press (@realAtlasPress) “Being poor is only romantic in books.” —Sidney Sheldon — https://nitter.net/realAtlasPress/status/2030690508729614529#m</p><div class="vb-images"><img src="https://nitter.net/pic/media%2FHC5hTtrbwAEVCfl.jpg" loading="lazy" alt=""></div></div></div>
+<div class="vb-entry"><div class="vb-spine"><a class="vb-dot vb-dot-twitter" href="https://x.com/Surudo1892/status/2028347298066182629" target="_blank" title="twitter"><svg viewBox="0 0 24 24" fill="currentColor" width="10" height="10"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><div class="vb-line"></div></div><div class="vb-content"><p class="vb-date">2026 · 03 · 02</p><p class="vb-text">支持！ 玩个锤子 (@cccchuizi) 【开工季福利来袭！！！】 为了感谢大家对我们的支持，我们打算免费送一台 Mac Mini256GB + 2000刀PackyAPI额度，助力2026年VibeCoding 和养殖龙虾！ 一等奖：macmini 256GB 一台 二等奖：Packyapi额度100 刀✖️10 人 三等奖：Packyapi额度50 刀✖️20 人 点赞+评论+转发即可参与抽…</p><div class="vb-images"><img src="https://nitter.net/pic/media%2FHCX7AjGbMAAIQuN.jpg" loading="lazy" alt=""></div></div></div>
+<div class="vb-entry"><div class="vb-spine"><a class="vb-dot vb-dot-twitter" href="https://x.com/Surudo1892/status/2028075316015468749" target="_blank" title="twitter"><svg viewBox="0 0 24 24" fill="currentColor" width="10" height="10"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><div class="vb-line"></div></div><div class="vb-content"><p class="vb-date">2026 · 03 · 01</p><p class="vb-text">This guy just went to pee and his colleagues chose him to be the next Supreme Leader. Visegrád 24 (@visegrad24) BREAKING: Ayatollah Arafi has been appointed as the acting Supreme Leader of Iran, ISNA …</p><div class="vb-images"><img src="https://nitter.net/pic/media%2FHCUTHUsWsAA0p_h.jpg" loading="lazy" alt=""></div></div></div>
 </div>
 <!-- SAYS_END -->
 
