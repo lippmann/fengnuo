@@ -472,7 +472,7 @@ body[data-slug="index"] .page-header { display: none !important; }
     <span class="says-date">2026 · 04 · 10</span>
   </div>
   <p class="says-text">Proper lad. Last summer I went to Hong Kong wearing No. 23 shirt to watch our team play against AC Milan in a friendly. Liverpool FC (@LFC) We can confirm Andy Robertson will bring his Reds career to …</p>
-  <div class="says-images"><img src="https://nitter.net/pic/pbs.twimg.com%2Fmedia%2FHFepjb7XAAA9OVg.jpg" loading="lazy" alt=""></div>
+  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/pbs.twimg.com%2Fmedia%2FHFepjb7XAAA9OVg.jpg" loading="lazy" alt=""></div>
 </div>
 
 <div class="says-entry">
