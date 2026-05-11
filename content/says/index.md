@@ -33,9 +33,13 @@ title: 碎的念
 <h1 class="sy-title">碎的念</h1>
 </div>
 <div class="sy-filter">
-<span style="font-size:10px;letter-spacing:0.14em;color:#6B6560;font-weight:300">13 条记录</span>
+<span style="font-size:10px;letter-spacing:0.14em;color:#6B6560;font-weight:300">14 条记录</span>
 </div>
 <div class="sy-feed">
+<div class="fn-entry">
+<div class="fn-entry-header"><a class="fn-logo fn-logo-twitter" href="https://x.com/Surudo1892/status/2053856346408398875" target="_blank" title="twitter" style="background:#000000"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><span class="fn-entry-date">2026 · 05 · 11</span></div>
+<p class="fn-entry-text">Kurt Vonnegut, Italo Calvino, Kazuo Ishiguro. Reads with Ravi (@readswithravi) Have you ever read a book by an author that was so good it made you want to read everything else they've written? — https://nitter.privacyredirect.com/readswithravi/status/2053845582947778571#m</p>
+</div>
 <div class="fn-entry">
 <div class="fn-entry-header"><a class="fn-logo fn-logo-douban" href="https://www.douban.com/topic/484507348/" target="_blank" title="douban" style="background:#07A761"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><rect x="3" y="3" width="18" height="3" rx="1"/><rect x="5" y="8" width="14" height="10" rx="1"/><rect x="8" y="20" width="3" height="1" rx="0.5"/><rect x="13" y="20" width="3" height="1" rx="0.5"/><rect x="10" y="18" width="4" height="3" rx="0.5"/></svg></a><span class="fn-entry-date">2026 · 04 · 18</span></div>
 <p class="fn-entry-text">Pocket 倒闭后，一直想找个替代品，找来找去都不是特别满意。我现在用微信读书比较多，于是索性自己 vibe code 了一个 Chrome 扩展，一键可以将网页文章传到自己的微信读书里。再加上 我用别的插件把微读的摘录和批注全部同步到 Obsidian 里，算是初步实现了笔记的归拢。
