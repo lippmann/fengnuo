@@ -450,8 +450,8 @@ body[data-slug="index"] .page-header { display: none !important; }
     <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2054400044779151791" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
     <span class="says-date">2026 · 05 · 13</span>
   </div>
-  <p class="says-text">Peak shithousery. End Wokeness (@EndWokeness) Rubio is wearing the Maduro tracksuit on his flight to China — https://nitter.privacyredirect.com/EndWokeness/status/2054340832359039153#m</p>
-  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHIJ8FRPWAAAHx15.jpg" loading="lazy" alt=""></div>
+  <p class="says-text">Peak shithousery. End Wokeness (@EndWokeness) Rubio is wearing the Maduro tracksuit on his flight to China — https://nitter.net/EndWokeness/status/2054340832359039153#m</p>
+  <div class="says-images"><img src="https://nitter.net/pic/media%2FHIJ8FRPWAAAHx15.jpg" loading="lazy" alt=""></div>
 </div>
 
 <div class="says-entry">
@@ -489,7 +489,7 @@ body[data-slug="index"] .page-header { display: none !important; }
     <span class="says-date">2026 · 04 · 10</span>
   </div>
   <p class="says-text">Proper lad. Last summer I went to Hong Kong wearing No. 23 shirt to watch our team play against AC Milan in a friendly. Liverpool FC (@LFC) We can confirm Andy Robertson will bring his Reds career to …</p>
-  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/pbs.twimg.com%2Fmedia%2FHFepjb7XAAA9OVg.jpg" loading="lazy" alt=""></div>
+  <div class="says-images"><img src="https://nitter.net/pic/pbs.twimg.com%2Fmedia%2FHFepjb7XAAA9OVg.jpg" loading="lazy" alt=""></div>
 </div>
 <!-- SAYS_END -->
 
