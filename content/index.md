@@ -447,6 +447,15 @@ body[data-slug="index"] .page-header { display: none !important; }
 <!-- SAYS_START -->
 <div class="says-entry">
   <div class="says-header">
+    <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2055405016010428541" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
+    <span class="says-date">2026 · 05 · 15</span>
+  </div>
+  <p class="says-text">Staying up until 4 a.m. in China to watch Liverpool get completely battered by Aston Villa is certainly the biggest mistake I have made in my life. Liverpool FC (@LFC) Defeat. #AVLLIV — https://nitter…</p>
+  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHIY3s54XAAArQqI.jpg" loading="lazy" alt=""></div>
+</div>
+
+<div class="says-entry">
+  <div class="says-header">
     <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2054400044779151791" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
     <span class="says-date">2026 · 05 · 13</span>
   </div>
@@ -481,15 +490,6 @@ body[data-slug="index"] .page-header { display: none !important; }
   </div>
   <p class="says-text">Claude Code 简直是人民的大救星，自从用上了它，我已经 vibe coding 了两个 Chrome 插件并提交商店审核。目前正在开发一个手机应用，另外还做了两份新产品的 PRD，等手头上的弄完就推进。谁能想到，在30多岁的高龄，竟然成了一个半路出家的码农。</p>
   <div class="says-images"><img src="https://img3.doubanio.com/f/shire/e49eca1517424a941871a2667a8957fd6c72d632/pics/new_menu.gif" loading="lazy" alt=""></div>
-</div>
-
-<div class="says-entry">
-  <div class="says-header">
-    <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2042573393376002534" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
-    <span class="says-date">2026 · 04 · 10</span>
-  </div>
-  <p class="says-text">Proper lad. Last summer I went to Hong Kong wearing No. 23 shirt to watch our team play against AC Milan in a friendly. Liverpool FC (@LFC) We can confirm Andy Robertson will bring his Reds career to …</p>
-  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/pbs.twimg.com%2Fmedia%2FHFepjb7XAAA9OVg.jpg" loading="lazy" alt=""></div>
 </div>
 <!-- SAYS_END -->
 

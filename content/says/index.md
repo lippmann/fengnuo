@@ -33,9 +33,13 @@ title: 碎的念
 <h1 class="sy-title">碎的念</h1>
 </div>
 <div class="sy-filter">
-<span style="font-size:10px;letter-spacing:0.14em;color:#6B6560;font-weight:300">15 条记录</span>
+<span style="font-size:10px;letter-spacing:0.14em;color:#6B6560;font-weight:300">16 条记录</span>
 </div>
 <div class="sy-feed">
+<div class="fn-entry">
+<div class="fn-entry-header"><a class="fn-logo fn-logo-twitter" href="https://x.com/Surudo1892/status/2055405016010428541" target="_blank" title="twitter" style="background:#000000"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><span class="fn-entry-date">2026 · 05 · 15</span></div>
+<p class="fn-entry-text">Staying up until 4 a.m. in China to watch Liverpool get completely battered by Aston Villa is certainly the biggest mistake I have made in my life. Liverpool FC (@LFC) Defeat. #AVLLIV — https://nitter.privacyredirect.com/LFC/status/2055392151022760406#m</p>
+<div class="fn-entry-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHIY3s54XAAArQqI.jpg" loading="lazy" alt=""></div></div>
 <div class="fn-entry">
 <div class="fn-entry-header"><a class="fn-logo fn-logo-twitter" href="https://x.com/Surudo1892/status/2054400044779151791" target="_blank" title="twitter" style="background:#000000"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><span class="fn-entry-date">2026 · 05 · 13</span></div>
 <p class="fn-entry-text">Peak shithousery. End Wokeness (@EndWokeness) Rubio is wearing the Maduro tracksuit on his flight to China — https://nitter.privacyredirect.com/EndWokeness/status/2054340832359039153#m</p>
