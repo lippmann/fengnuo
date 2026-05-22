@@ -447,6 +447,15 @@ body[data-slug="index"] .page-header { display: none !important; }
 <!-- SAYS_START -->
 <div class="says-entry">
   <div class="says-header">
+    <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2057810535190786268" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
+    <span class="says-date">2026 · 05 · 22</span>
+  </div>
+  <p class="says-text">Yeah, at least there's some Liverpool elements in the England team for this summer's World Cup. England (@England) Come Together. Video — https://nitter.privacyredirect.com/England/status/205774830683…</p>
+  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHI6RnN6XsAAM_k6.jpg" loading="lazy" alt=""></div>
+</div>
+
+<div class="says-entry">
+  <div class="says-header">
     <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2055405016010428541" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
     <span class="says-date">2026 · 05 · 15</span>
   </div>
@@ -480,15 +489,6 @@ body[data-slug="index"] .page-header { display: none !important; }
 下载地址如下：
 以下是本扩展的功能介绍和使用方式，直接照抄了 Chrome 应用商店的文案：
 ━━ 核心功能 …</p>
-  <div class="says-images"><img src="https://img3.doubanio.com/f/shire/e49eca1517424a941871a2667a8957fd6c72d632/pics/new_menu.gif" loading="lazy" alt=""></div>
-</div>
-
-<div class="says-entry">
-  <div class="says-header">
-    <a class="says-platform says-platform-douban" href="https://www.douban.com/topic/483755955/" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><rect x="3" y="3" width="18" height="3" rx="1"/><rect x="5" y="8" width="14" height="10" rx="1"/><rect x="8" y="20" width="3" height="1" rx="0.5"/><rect x="13" y="20" width="3" height="1" rx="0.5"/><rect x="10" y="18" width="4" height="3" rx="0.5"/></svg></a>
-    <span class="says-date">2026 · 04 · 10</span>
-  </div>
-  <p class="says-text">Claude Code 简直是人民的大救星，自从用上了它，我已经 vibe coding 了两个 Chrome 插件并提交商店审核。目前正在开发一个手机应用，另外还做了两份新产品的 PRD，等手头上的弄完就推进。谁能想到，在30多岁的高龄，竟然成了一个半路出家的码农。</p>
   <div class="says-images"><img src="https://img3.doubanio.com/f/shire/e49eca1517424a941871a2667a8957fd6c72d632/pics/new_menu.gif" loading="lazy" alt=""></div>
 </div>
 <!-- SAYS_END -->
