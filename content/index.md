@@ -450,8 +450,8 @@ body[data-slug="index"] .page-header { display: none !important; }
     <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2057810535190786268" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
     <span class="says-date">2026 · 05 · 22</span>
   </div>
-  <p class="says-text">Yeah, at least there's some Liverpool elements in the England team for this summer's World Cup. England (@England) Come Together. Video — https://nitter.privacyredirect.com/England/status/205774830683…</p>
-  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHI6RnN6XsAAM_k6.jpg" loading="lazy" alt=""></div>
+  <p class="says-text">Yeah, at least there's some Liverpool elements in the England team for this summer's World Cup. England (@England) Come Together. Video — https://nitter.net/England/status/2057748306839622050#m</p>
+  <div class="says-images"><img src="https://nitter.net/pic/media%2FHI6RnN6XsAAM_k6.jpg" loading="lazy" alt=""></div>
 </div>
 
 <div class="says-entry">
@@ -460,7 +460,7 @@ body[data-slug="index"] .page-header { display: none !important; }
     <span class="says-date">2026 · 05 · 15</span>
   </div>
   <p class="says-text">Staying up until 4 a.m. in China to watch Liverpool get completely battered by Aston Villa is certainly the biggest mistake I have made in my life. Liverpool FC (@LFC) Defeat. #AVLLIV — https://nitter…</p>
-  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHIY3s54XAAArQqI.jpg" loading="lazy" alt=""></div>
+  <div class="says-images"><img src="https://nitter.net/pic/media%2FHIY3s54XAAArQqI.jpg" loading="lazy" alt=""></div>
 </div>
 
 <div class="says-entry">
@@ -468,8 +468,8 @@ body[data-slug="index"] .page-header { display: none !important; }
     <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2054400044779151791" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
     <span class="says-date">2026 · 05 · 13</span>
   </div>
-  <p class="says-text">Peak shithousery. End Wokeness (@EndWokeness) Rubio is wearing the Maduro tracksuit on his flight to China — https://nitter.privacyredirect.com/EndWokeness/status/2054340832359039153#m</p>
-  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHIJ8FRPWAAAHx15.jpg" loading="lazy" alt=""></div>
+  <p class="says-text">Peak shithousery. End Wokeness (@EndWokeness) Rubio is wearing the Maduro tracksuit on his flight to China — https://nitter.net/EndWokeness/status/2054340832359039153#m</p>
+  <div class="says-images"><img src="https://nitter.net/pic/media%2FHIJ8FRPWAAAHx15.jpg" loading="lazy" alt=""></div>
 </div>
 
 <div class="says-entry">
