@@ -447,6 +447,15 @@ body[data-slug="index"] .page-header { display: none !important; }
 <!-- SAYS_START -->
 <div class="says-entry">
   <div class="says-header">
+    <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2058618990625472831" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
+    <span class="says-date">2026 · 05 · 24</span>
+  </div>
+  <p class="says-text">This is my favourite photo of 1989 Tiananmen Square massacre. I call it Guns and Roses. fire images (@fireimages) — https://nitter.privacyredirect.com/fireimages/status/2058259332706304215#m</p>
+  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHJBnLEeWsAADzfT.jpg" loading="lazy" alt=""></div>
+</div>
+
+<div class="says-entry">
+  <div class="says-header">
     <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2057810535190786268" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
     <span class="says-date">2026 · 05 · 22</span>
   </div>
@@ -478,18 +487,6 @@ body[data-slug="index"] .page-header { display: none !important; }
     <span class="says-date">2026 · 05 · 11</span>
   </div>
   <p class="says-text">Kurt Vonnegut, Italo Calvino, Kazuo Ishiguro. Reads with Ravi (@readswithravi) Have you ever read a book by an author that was so good it made you want to read everything else they've written? — https…</p>
-</div>
-
-<div class="says-entry">
-  <div class="says-header">
-    <a class="says-platform says-platform-douban" href="https://www.douban.com/topic/484507348/" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><rect x="3" y="3" width="18" height="3" rx="1"/><rect x="5" y="8" width="14" height="10" rx="1"/><rect x="8" y="20" width="3" height="1" rx="0.5"/><rect x="13" y="20" width="3" height="1" rx="0.5"/><rect x="10" y="18" width="4" height="3" rx="0.5"/></svg></a>
-    <span class="says-date">2026 · 04 · 18</span>
-  </div>
-  <p class="says-text">Pocket 倒闭后，一直想找个替代品，找来找去都不是特别满意。我现在用微信读书比较多，于是索性自己 vibe code 了一个 Chrome 扩展，一键可以将网页文章传到自己的微信读书里。再加上 我用别的插件把微读的摘录和批注全部同步到 Obsidian 里，算是初步实现了笔记的归拢。
-下载地址如下：
-以下是本扩展的功能介绍和使用方式，直接照抄了 Chrome 应用商店的文案：
-━━ 核心功能 …</p>
-  <div class="says-images"><img src="https://img3.doubanio.com/f/shire/e49eca1517424a941871a2667a8957fd6c72d632/pics/new_menu.gif" loading="lazy" alt=""></div>
 </div>
 <!-- SAYS_END -->
 
