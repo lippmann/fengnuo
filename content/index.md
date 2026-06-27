@@ -447,6 +447,15 @@ body[data-slug="index"] .page-header { display: none !important; }
 <!-- SAYS_START -->
 <div class="says-entry">
   <div class="says-header">
+    <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2070912776328061009" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
+    <span class="says-date">2026 · 06 · 27</span>
+  </div>
+  <p class="says-text">Nostalgia. I installed this software on my Windows XP. Retro Tech Dreams (@RetroTechDreams) Encarta 99 — https://nitter.privacyredirect.com/RetroTechDreams/status/2070902229670809800#m</p>
+  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHL1SmpHWkAApgg7.jpg" loading="lazy" alt=""></div>
+</div>
+
+<div class="says-entry">
+  <div class="says-header">
     <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2067343625567211713" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
     <span class="says-date">2026 · 06 · 17</span>
   </div>
@@ -478,15 +487,6 @@ body[data-slug="index"] .page-header { display: none !important; }
   </div>
   <p class="says-text">Yeah, at least there's some Liverpool elements in the England team for this summer's World Cup. England (@England) Come Together. Video — https://nitter.privacyredirect.com/England/status/205774830683…</p>
   <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHI6RnN6XsAAM_k6.jpg" loading="lazy" alt=""></div>
-</div>
-
-<div class="says-entry">
-  <div class="says-header">
-    <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2055405016010428541" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
-    <span class="says-date">2026 · 05 · 15</span>
-  </div>
-  <p class="says-text">Staying up until 4 a.m. in China to watch Liverpool get completely battered by Aston Villa is certainly the biggest mistake I have made in my life. Liverpool FC (@LFC) Defeat. #AVLLIV — https://nitter…</p>
-  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHIY3s54XAAArQqI.jpg" loading="lazy" alt=""></div>
 </div>
 <!-- SAYS_END -->
 

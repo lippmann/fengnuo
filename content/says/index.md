@@ -33,9 +33,13 @@ title: 碎的念
 <h1 class="sy-title">碎的念</h1>
 </div>
 <div class="sy-filter">
-<span style="font-size:10px;letter-spacing:0.14em;color:#6B6560;font-weight:300">20 条记录</span>
+<span style="font-size:10px;letter-spacing:0.14em;color:#6B6560;font-weight:300">21 条记录</span>
 </div>
 <div class="sy-feed">
+<div class="fn-entry">
+<div class="fn-entry-header"><a class="fn-logo fn-logo-twitter" href="https://x.com/Surudo1892/status/2070912776328061009" target="_blank" title="twitter" style="background:#000000"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><span class="fn-entry-date">2026 · 06 · 27</span></div>
+<p class="fn-entry-text">Nostalgia. I installed this software on my Windows XP. Retro Tech Dreams (@RetroTechDreams) Encarta 99 — https://nitter.privacyredirect.com/RetroTechDreams/status/2070902229670809800#m</p>
+<div class="fn-entry-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHL1SmpHWkAApgg7.jpg" loading="lazy" alt=""></div></div>
 <div class="fn-entry">
 <div class="fn-entry-header"><a class="fn-logo fn-logo-twitter" href="https://x.com/Surudo1892/status/2067343625567211713" target="_blank" title="twitter" style="background:#000000"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><span class="fn-entry-date">2026 · 06 · 17</span></div>
 <p class="fn-entry-text">Piers, you don't have to suck Ronaldo's cock every single time. Deep down you know Messi is better than Ronaldo. BTW, I agree with you on many social and political issues, but that doesn't change the fact that you are a twat on this matter. Piers Morgan (@piersmorgan) Brilliant performance by Messi last night - but he should have been sent off for this outrageous studs-up foul on Algeria’s Mandi. The fact he didn’t even get booked is ridiculous - could have broken the guy’s leg. — https://nitter.privacyredirect.com/piersmorgan/status/2067155324704842185#m</p>
