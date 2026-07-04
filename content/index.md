@@ -450,8 +450,8 @@ body[data-slug="index"] .page-header { display: none !important; }
     <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2070912776328061009" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
     <span class="says-date">2026 · 06 · 27</span>
   </div>
-  <p class="says-text">Nostalgia. I installed this software on my Windows XP. Retro Tech Dreams (@RetroTechDreams) Encarta 99 — https://nitter.privacyredirect.com/RetroTechDreams/status/2070902229670809800#m</p>
-  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHL1SmpHWkAApgg7.jpg" loading="lazy" alt=""></div>
+  <p class="says-text">Nostalgia. I installed this software on my Windows XP. Retro Tech Dreams (@RetroTechDreams) Encarta 99 — https://nitter.net/RetroTechDreams/status/2070902229670809800#m</p>
+  <div class="says-images"><img src="https://nitter.net/pic/media%2FHL1SmpHWkAApgg7.jpg" loading="lazy" alt=""></div>
 </div>
 
 <div class="says-entry">
@@ -460,7 +460,7 @@ body[data-slug="index"] .page-header { display: none !important; }
     <span class="says-date">2026 · 06 · 17</span>
   </div>
   <p class="says-text">Piers, you don't have to suck Ronaldo's cock every single time. Deep down you know Messi is better than Ronaldo. BTW, I agree with you on many social and political issues, but that doesn't change the …</p>
-  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHLAC0DQWEAAqKtl.jpg" loading="lazy" alt=""></div>
+  <div class="says-images"><img src="https://nitter.net/pic/media%2FHLAC0DQWEAAqKtl.jpg" loading="lazy" alt=""></div>
 </div>
 
 <div class="says-entry">
@@ -468,7 +468,7 @@ body[data-slug="index"] .page-header { display: none !important; }
     <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2058884808131150163" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
     <span class="says-date">2026 · 05 · 25</span>
   </div>
-  <p class="says-text">I am never going to leave this app. Elon Musk (@elonmusk) Putting “Ph.D.” in your social media name is a sure sign of a pompous retard — https://nitter.privacyredirect.com/elonmusk/status/205869837018…</p>
+  <p class="says-text">I am never going to leave this app. Elon Musk (@elonmusk) Putting “Ph.D.” in your social media name is a sure sign of a pompous retard — https://nitter.net/elonmusk/status/2058698370189766822#m</p>
 </div>
 
 <div class="says-entry">
@@ -476,8 +476,8 @@ body[data-slug="index"] .page-header { display: none !important; }
     <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2058618990625472831" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
     <span class="says-date">2026 · 05 · 24</span>
   </div>
-  <p class="says-text">This is my favourite photo of 1989 Tiananmen Square massacre. I call it Guns and Roses. fire images (@fireimages) — https://nitter.privacyredirect.com/fireimages/status/2058259332706304215#m</p>
-  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHJBnLEeWsAADzfT.jpg" loading="lazy" alt=""></div>
+  <p class="says-text">This is my favourite photo of 1989 Tiananmen Square massacre. I call it Guns and Roses. fire images (@fireimages) — https://nitter.net/fireimages/status/2058259332706304215#m</p>
+  <div class="says-images"><img src="https://nitter.net/pic/media%2FHJBnLEeWsAADzfT.jpg" loading="lazy" alt=""></div>
 </div>
 
 <div class="says-entry">
@@ -485,8 +485,8 @@ body[data-slug="index"] .page-header { display: none !important; }
     <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2057810535190786268" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
     <span class="says-date">2026 · 05 · 22</span>
   </div>
-  <p class="says-text">Yeah, at least there's some Liverpool elements in the England team for this summer's World Cup. England (@England) Come Together. Video — https://nitter.privacyredirect.com/England/status/205774830683…</p>
-  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHI6RnN6XsAAM_k6.jpg" loading="lazy" alt=""></div>
+  <p class="says-text">Yeah, at least there's some Liverpool elements in the England team for this summer's World Cup. England (@England) Come Together. Video — https://nitter.net/England/status/2057748306839622050#m</p>
+  <div class="says-images"><img src="https://nitter.net/pic/media%2FHI6RnN6XsAAM_k6.jpg" loading="lazy" alt=""></div>
 </div>
 <!-- SAYS_END -->
 
