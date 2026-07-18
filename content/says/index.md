@@ -62,8 +62,8 @@ title: 碎的念
 <div class="fn-entry-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHIY3s54XAAArQqI.jpg" loading="lazy" alt=""></div></div>
 <div class="fn-entry">
 <div class="fn-entry-header"><a class="fn-logo fn-logo-twitter" href="https://x.com/Surudo1892/status/2054400044779151791" target="_blank" title="twitter" style="background:#000000"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><span class="fn-entry-date">2026 · 05 · 13</span></div>
-<p class="fn-entry-text">Peak shithousery.</p>
-</div>
+<p class="fn-entry-text">Peak shithousery. End Wokeness (@EndWokeness) Rubio is wearing the Maduro tracksuit on his flight to China — https://nitter.privacyredirect.com/EndWokeness/status/2054340832359039153#m</p>
+<div class="fn-entry-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHIJ8FRPWAAAHx15.jpg" loading="lazy" alt=""><img src="https://nitter.privacyredirect.com/pic/media%2FHIJ8FRMWYAA-vaA.jpg" loading="lazy" alt=""></div></div>
 <div class="fn-entry">
 <div class="fn-entry-header"><a class="fn-logo fn-logo-twitter" href="https://x.com/Surudo1892/status/2053856346408398875" target="_blank" title="twitter" style="background:#000000"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><span class="fn-entry-date">2026 · 05 · 11</span></div>
 <p class="fn-entry-text">Kurt Vonnegut, Italo Calvino, Kazuo Ishiguro. Reads with Ravi (@readswithravi) Have you ever read a book by an author that was so good it made you want to read everything else they've written? — https://nitter.privacyredirect.com/readswithravi/status/2053845582947778571#m</p>
