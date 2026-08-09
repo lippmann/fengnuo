@@ -447,6 +447,15 @@ body[data-slug="index"] .page-header { display: none !important; }
 <!-- SAYS_START -->
 <div class="says-entry">
   <div class="says-header">
+    <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2086395958083117528" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
+    <span class="says-date">2026 · 08 · 09</span>
+  </div>
+  <p class="says-text">Best book I’ve read since Pachinko last year. Coetzee’s prose is mesmerising.</p>
+  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHPReD2Xa0AA4v5R.jpg" loading="lazy" alt=""></div>
+</div>
+
+<div class="says-entry">
+  <div class="says-header">
     <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2070912776328061009" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
     <span class="says-date">2026 · 06 · 27</span>
   </div>
@@ -478,15 +487,6 @@ body[data-slug="index"] .page-header { display: none !important; }
   </div>
   <p class="says-text">This is my favourite photo of 1989 Tiananmen Square massacre. I call it Guns and Roses. fire images (@fireimages) — https://nitter.privacyredirect.com/fireimages/status/2058259332706304215#m</p>
   <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHJBnLEeWsAADzfT.jpg" loading="lazy" alt=""></div>
-</div>
-
-<div class="says-entry">
-  <div class="says-header">
-    <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2057810535190786268" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
-    <span class="says-date">2026 · 05 · 22</span>
-  </div>
-  <p class="says-text">Yeah, at least there's some Liverpool elements in the England team for this summer's World Cup. England (@England) Come Together. Video — https://nitter.privacyredirect.com/England/status/205774830683…</p>
-  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHI6RnN6XsAAM_k6.jpg" loading="lazy" alt=""></div>
 </div>
 <!-- SAYS_END -->
 
