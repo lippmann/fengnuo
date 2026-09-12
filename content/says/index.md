@@ -33,9 +33,17 @@ title: 碎的念
 <h1 class="sy-title">碎的念</h1>
 </div>
 <div class="sy-filter">
-<span style="font-size:10px;letter-spacing:0.14em;color:#6B6560;font-weight:300">22 条记录</span>
+<span style="font-size:10px;letter-spacing:0.14em;color:#6B6560;font-weight:300">24 条记录</span>
 </div>
 <div class="sy-feed">
+<div class="fn-entry">
+<div class="fn-entry-header"><a class="fn-logo fn-logo-twitter" href="https://x.com/Surudo1892/status/2094637647578943935" target="_blank" title="twitter" style="background:#000000"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><span class="fn-entry-date">2026 · 09 · 01</span></div>
+<p class="fn-entry-text">Oh Piers, you look pathetic now. Piers Morgan (@piersmorgan) BREAKING: * Lionel Messi quits international football having scored 125 goals for Argentina, the second-highest number in football history. * @Cristiano Ronaldo has scored 146 goals for Portugal, the highest in football history. This settles the 🐐debate. — https://nitter.privacyredirect.com/piersmorgan/status/2094456114179961310#m</p>
+<div class="fn-entry-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHREAu9TXMAA7XAZ.jpg" loading="lazy" alt=""></div></div>
+<div class="fn-entry">
+<div class="fn-entry-header"><a class="fn-logo fn-logo-twitter" href="https://x.com/Surudo1892/status/2093206560423993489" target="_blank" title="twitter" style="background:#000000"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><span class="fn-entry-date">2026 · 08 · 28</span></div>
+<p class="fn-entry-text">孙哥最鸡贼了，在 X 上发长文还能领马斯克的阅读激励。 H.E. Justin Sun 👨‍🚀 🌞 (@justinsuntron) Article 我的女友景甜 一颗卵子的重量，三点五微克。 五千万美元现金的重量，两点五吨。 景甜在蒙太奇拉古纳海滩的电话里向我要的是后者，抵押的是前者。 — https://nitter.privacyredirect.com/justinsuntron/status/2092932777612390850#m</p>
+<div class="fn-entry-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHQrOBGpbkAAdEm5.jpg" loading="lazy" alt=""></div></div>
 <div class="fn-entry">
 <div class="fn-entry-header"><a class="fn-logo fn-logo-twitter" href="https://x.com/Surudo1892/status/2086395958083117528" target="_blank" title="twitter" style="background:#000000"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a><span class="fn-entry-date">2026 · 08 · 09</span></div>
 <p class="fn-entry-text">Best book I’ve read since Pachinko last year. Coetzee’s prose is mesmerising.</p>

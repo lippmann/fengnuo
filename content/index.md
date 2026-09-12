@@ -447,6 +447,24 @@ body[data-slug="index"] .page-header { display: none !important; }
 <!-- SAYS_START -->
 <div class="says-entry">
   <div class="says-header">
+    <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2094637647578943935" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
+    <span class="says-date">2026 · 09 · 01</span>
+  </div>
+  <p class="says-text">Oh Piers, you look pathetic now. Piers Morgan (@piersmorgan) BREAKING: * Lionel Messi quits international football having scored 125 goals for Argentina, the second-highest number in football history.…</p>
+  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHREAu9TXMAA7XAZ.jpg" loading="lazy" alt=""></div>
+</div>
+
+<div class="says-entry">
+  <div class="says-header">
+    <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2093206560423993489" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
+    <span class="says-date">2026 · 08 · 28</span>
+  </div>
+  <p class="says-text">孙哥最鸡贼了，在 X 上发长文还能领马斯克的阅读激励。 H.E. Justin Sun 👨‍🚀 🌞 (@justinsuntron) Article 我的女友景甜 一颗卵子的重量，三点五微克。 五千万美元现金的重量，两点五吨。 景甜在蒙太奇拉古纳海滩的电话里向我要的是后者，抵押的是前者。 — https://nitter.privacyredirect.com/justinsuntron/stat…</p>
+  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHQrOBGpbkAAdEm5.jpg" loading="lazy" alt=""></div>
+</div>
+
+<div class="says-entry">
+  <div class="says-header">
     <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2086395958083117528" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
     <span class="says-date">2026 · 08 · 09</span>
   </div>
@@ -470,23 +488,6 @@ body[data-slug="index"] .page-header { display: none !important; }
   </div>
   <p class="says-text">Piers, you don't have to suck Ronaldo's cock every single time. Deep down you know Messi is better than Ronaldo. BTW, I agree with you on many social and political issues, but that doesn't change the …</p>
   <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHLAC0DQWEAAqKtl.jpg" loading="lazy" alt=""></div>
-</div>
-
-<div class="says-entry">
-  <div class="says-header">
-    <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2058884808131150163" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
-    <span class="says-date">2026 · 05 · 25</span>
-  </div>
-  <p class="says-text">I am never going to leave this app. Elon Musk (@elonmusk) Putting “Ph.D.” in your social media name is a sure sign of a pompous retard — https://nitter.privacyredirect.com/elonmusk/status/205869837018…</p>
-</div>
-
-<div class="says-entry">
-  <div class="says-header">
-    <a class="says-platform says-platform-twitter" href="https://x.com/Surudo1892/status/2058618990625472831" target="_blank"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.647l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg></a>
-    <span class="says-date">2026 · 05 · 24</span>
-  </div>
-  <p class="says-text">This is my favourite photo of 1989 Tiananmen Square massacre. I call it Guns and Roses. fire images (@fireimages) — https://nitter.privacyredirect.com/fireimages/status/2058259332706304215#m</p>
-  <div class="says-images"><img src="https://nitter.privacyredirect.com/pic/media%2FHJBnLEeWsAADzfT.jpg" loading="lazy" alt=""></div>
 </div>
 <!-- SAYS_END -->
 
